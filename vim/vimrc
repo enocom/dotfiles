@@ -1,6 +1,10 @@
 set nocompatible " turn off vi compatibility
 set encoding=utf-8
 
+" =============== Pathogen =======================
+call pathogen#infect()
+filetype plugin indent on
+
 " =============== Good Look ======================
 syntax on
 colorscheme zenburn
