@@ -1,15 +1,27 @@
-set nocompatible " turn off vi compatibility
-set encoding=utf-8
-
-" =============== Pathogen =======================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pathogen
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call pathogen#infect()
 filetype plugin indent on
 
-" =============== Good Look ======================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" BASIC EDITING CONFIGURATION
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible " turn off vi compatibility
+set encoding=utf-8
+
+" =============== Appearance ======================
 syntax on
 colorscheme zenburn
 set number
+set numberwidth=5
 set visualbell
+" always display tabs
+set showtabline=2
+" shows possible completions above command line
+set wildmenu
+" Display tabs and trailing spaces
+set list listchars=tab:\ \ ,trail:·
 
 " =============== Search Settings ================
 set incsearch             " Find the next match as we type the search
@@ -32,32 +44,10 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" ======== Display tabs and trailing spaces =======
-set list listchars=tab:\ \ ,trail:·
-
-" ======== Mappings ===============================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
-" =============== Old School ======================
-nnoremap <up> <nop>
-nnoremap <down> <nop>
-nnoremap <left> <nop>
-nnoremap <right> <nop>
-" insert mode
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-nnoremap j gj
-nnoremap k gk
-
-" =============== Setup GUI ========================
-if has("gui_running")
-  set guioptions=egmrt
-  set guioptions-=r
-  set guifont=Monaco:h18
-  set gcr=a:blinkon0 " turn off cursor blink
-endif
-
 
 " =============== Shortcuts ========================
 " Navigate between windows
@@ -66,7 +56,26 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" ========= Source the vimrc file ==================
+" =============== Old School ======================
+" disble arrow key functionality in normal and insert modes
+map <Left> <Nop>
+map <Right> <Nop>
+map <Up> <Nop>
+map <Down> <Nop>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Setup GUI
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if has("gui_running")
+  set guioptions=egmrt
+  set guioptions-=r
+  set guifont=Monaco:h18
+  set gcr=a:blinkon0 " turn off cursor blink
+endif
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Source the vimrc file after save
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 if has("autocmd")
   autocmd bufwritepost .vimrc source $MYVIMRC
 endif
