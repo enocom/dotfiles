@@ -56,6 +56,15 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" =============== xmpfilter ========================
+nmap <buffer> <F5> <Plug>(xmpfilter-run)
+xmap <buffer> <F5> <Plug>(xmpfilter-run)
+imap <buffer> <F5> <Plug>(xmpfilter-run)
+
+nmap <buffer> <F4> <Plug>(xmpfilter-mark)
+xmap <buffer> <F4> <Plug>(xmpfilter-mark)
+imap <buffer> <F4> <Plug>(xmpfilter-mark)
+
 " =============== Old School ======================
 " disble arrow key functionality in normal and insert modes
 map <Left> <Nop>
