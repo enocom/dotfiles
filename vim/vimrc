@@ -65,12 +65,13 @@ nmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 xmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 " imap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 
-" =============== Old School ======================
-" disble arrow key functionality in normal and insert modes
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
+" =============== tabs =============================
+map <leader>tt :tabnew<cr>
+map <leader>te :tabedit
+map <leader>tc :tabclose<cr>
+map <leader>to :tabonly<cr>
+map <leader>tn :tabnext<cr>
+map <leader>tp :tabprevious<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup GUI
