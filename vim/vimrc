@@ -49,6 +49,8 @@ set expandtab
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 
+inoremap jk <ESC>
+
 " =============== Shortcuts ========================
 " Navigate between windows
 map <C-h> <C-w>h
