@@ -71,7 +71,7 @@ xmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 map <leader>nt :tabnew<cr>
 map <leader>ct :tabclose<cr>
 map <leader>ot :tabonly<cr>
-map <leader>nt :tabnext<cr>
+map <leader>xt :tabnext<cr>
 map <leader>pt :tabprevious<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
