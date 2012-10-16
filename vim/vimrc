@@ -68,12 +68,11 @@ xmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 " imap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 
 " =============== tabs =============================
-map <leader>tt :tabnew<cr>
-map <leader>te :tabedit
-map <leader>tc :tabclose<cr>
-map <leader>to :tabonly<cr>
-map <leader>tn :tabnext<cr>
-map <leader>tp :tabprevious<cr>
+map <leader>nt :tabnew<cr>
+map <leader>ct :tabclose<cr>
+map <leader>ot :tabonly<cr>
+map <leader>nt :tabnext<cr>
+map <leader>pt :tabprevious<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Setup GUI
