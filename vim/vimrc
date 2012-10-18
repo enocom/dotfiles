@@ -12,7 +12,7 @@ set encoding=utf-8
 
 " =============== Appearance ======================
 syntax on
-colorscheme delek
+colorscheme desert
 set number
 set numberwidth=5
 set visualbell
