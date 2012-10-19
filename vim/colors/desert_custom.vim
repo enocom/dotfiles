@@ -25,8 +25,10 @@ hi PmenuSel     ctermfg=Black ctermbg=DarkBlue
 hi Question   	ctermfg=Green
 hi Search   	  cterm=NONE ctermfg=Black ctermbg=Green
 hi SpecialKey   ctermfg=DarkGreen
+hi statusline   ctermfg=black ctermbg=White
+hi StatusLineNC ctermfg=Black ctermbg=Grey
 hi Title    	  ctermfg=DarkMagenta
-hi VertSplit    cterm=reverse
+hi VertSplit    ctermbg=Yellow
 hi Visual   	  cterm=reverse
 hi VisualNOS   	cterm=underline
 hi WarningMsg  	ctermfg=DarkRed
