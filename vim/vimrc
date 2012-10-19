@@ -57,9 +57,15 @@ nnoremap ; :
 " remap ESC
 inoremap jk <ESC>
 
+" =============== changing windows ========================
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
 " =============== vimrc ========================
-nmap <silent> <leader>ev :e $MYVIMRC<cr> " open .vimrc
-nmap <silent> <leader>sv :s $MYVIMRC<cr> " source .vimrc
+nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
+nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
 " =============== xmpfilter ========================
 nmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
