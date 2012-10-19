@@ -5,6 +5,15 @@ snippet #!
 # Rspec Additions
 snippet it
 	it { should${1} have_${2}('${3}') }${4}
+snippet des
+	describe "${1:add test description}" do
+		${2:# add assertions here}
+	end${3}
+snippet d
+	do
+		${1}
+	end${2}
+
 # New Block
 snippet =b
 	=begin rdoc
