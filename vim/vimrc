@@ -26,6 +26,7 @@ set list listchars=tab:\ \ ,trail:·
 " =============== Search Settings ================
 set incsearch             " Find the next match as we type the search
 set hlsearch              " Highlight searches by default
+set smartcase             " ignore case if lowercase, otherwise match case
 
 " =============== Turn off Swap Files ============
 set noswapfile
@@ -44,21 +45,27 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
+" =============== hidden buffers ==================
+set hidden " allows for opening new without saving current buffer
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
+nnoremap ; :
 
+" remap ESC
 inoremap jk <ESC>
 
-" =============== xmpfilter ========================
-nmap <buffer> <leader>e  <Plug>(xmpfilter-run)
-xmap <buffer> <leader>e  <Plug>(xmpfilter-run)
-" imap <buffer> <leader>e  <Plug>(xmpfilter-run)
+" =============== vimrc ========================
+nmap <silent> <leader>ev :e $MYVIMRC<cr> " open .vimrc
+nmap <silent> <leader>sv :s $MYVIMRC<cr> " source .vimrc
 
+" =============== xmpfilter ========================
 nmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
 xmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
-" imap <buffer> <leader>m  <Plug>(xmpfilter-mark)
+nmap <buffer> <leader>e  <Plug>(xmpfilter-run)
+xmap <buffer> <leader>e  <Plug>(xmpfilter-run)
 
 " =============== tabs =============================
 map <leader>nt :tabnew<cr>
@@ -66,20 +73,3 @@ map <leader>ct :tabclose<cr>
 map <leader>ot :tabonly<cr>
 map <leader>xt :tabnext<cr>
 map <leader>pt :tabprevious<cr>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Setup GUI
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("gui_running")
-  set guioptions=egmrt
-  set guioptions-=r
-  set guifont=Monaco:h18
-  set gcr=a:blinkon0 " turn off cursor blink
-endif
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Source the vimrc file after save
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-if has("autocmd")
-  autocmd bufwritepost .vimrc source $MYVIMRC
-endif
