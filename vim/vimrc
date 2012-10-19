@@ -51,13 +51,6 @@ let mapleader = ","
 
 inoremap jk <ESC>
 
-" =============== Shortcuts ========================
-" Navigate between windows
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
 " =============== xmpfilter ========================
 nmap <buffer> <leader>e  <Plug>(xmpfilter-run)
 xmap <buffer> <leader>e  <Plug>(xmpfilter-run)
