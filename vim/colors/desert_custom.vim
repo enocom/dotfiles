@@ -17,6 +17,7 @@ hi Folded   	  ctermfg=DarkGrey ctermbg=NONE
 hi FoldColumn   ctermfg=DarkGrey ctermbg=NONE
 hi IncSearch    cterm=NONE ctermfg=Black ctermbg=White
 hi LineNr   	  ctermfg=Yellow
+hi MatchParen   cterm=reverse ctermbg=Black
 hi MoreMsg    	ctermfg=Darkgreen
 hi ModeMsg    	cterm=NONE ctermfg=Brown
 hi NonText    	ctermfg=Darkblue
@@ -29,20 +30,20 @@ hi statusline   ctermfg=black ctermbg=White
 hi StatusLineNC ctermfg=Black ctermbg=Grey
 hi Title    	  ctermfg=DarkMagenta
 hi VertSplit    ctermbg=Yellow
-hi Visual   	  cterm=reverse
+hi Visual   	  cterm=reverse ctermbg=Black
 hi VisualNOS   	cterm=underline
 hi WarningMsg  	ctermfg=DarkRed
 hi WildMenu   	ctermfg=Black ctermbg=Yellow
 
 " syntax highlighting
 hi Comment    	ctermfg=DarkCyan
-hi Constant   	ctermfg=Brown
+hi Constant   	ctermfg=DarkRed
 hi Error    	  ctermfg=Gray ctermbg=DarkRed
 hi Identifier   ctermfg=DarkCyan
 hi Ignore   	  ctermfg=Gray
 hi Ignore      	ctermfg=Darkgrey
 hi PreProc    	ctermfg=DarkMagenta
-hi Special    	ctermfg=DarkMagenta
+hi Special    	ctermfg=DarkRed
 hi Statement    ctermfg=Yellow
 hi Type   		  ctermfg=DarkGreen
 hi Underlined   cterm=underline ctermfg=DarkMagenta
