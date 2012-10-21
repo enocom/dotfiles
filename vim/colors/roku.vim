@@ -4,7 +4,7 @@
 
 hi clear
 
-let colors_name = "desert_custom"
+let colors_name = "roku"
 
 " color terminal definitions
 hi DiffAdd    	ctermbg=DarkBlue
