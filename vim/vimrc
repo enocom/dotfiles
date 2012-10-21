@@ -12,7 +12,7 @@ set encoding=utf-8
 
 " =============== Appearance ======================
 syntax on
-colorscheme desert_custom
+colorscheme roku
 set number
 set numberwidth=5
 set visualbell
