@@ -66,6 +66,12 @@ map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
+" Resize windows
+if bufwinnr(1)
+  map + <C-W>+
+  map - <C-W>-
+endif
+
 " =============== vimrc ========================
 nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
