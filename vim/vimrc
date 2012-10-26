@@ -22,6 +22,8 @@ set showtabline=2
 set wildmenu
 " Display tabs and trailing spaces
 set list listchars=tab:\ \ ,trail:·
+" Use syntax based code folding
+set foldmethod=syntax
 
 " =============== Search Settings ================
 set incsearch             " Find the next match as we type the search
@@ -52,10 +54,11 @@ set hidden " allows for opening new without saving current buffer
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
-nnoremap ; :
+" tempting remap of command key
+" nnoremap ; :
 
 " remap ESC
-inoremap jk <ESC>
+inoremap jj <ESC>
 
 " =============== changing windows ========================
 map <C-h> <C-w>h
