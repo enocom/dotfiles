@@ -60,6 +60,9 @@ let mapleader = ","
 " remap ESC
 inoremap jj <ESC>
 
+" unset last search pattern by hitting return
+nnoremap <CR> :noh<CR> <CR>
+
 " =============== changing windows ========================
 map <C-h> <C-w>h
 map <C-j> <C-w>j
