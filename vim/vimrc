@@ -12,6 +12,8 @@ set encoding=utf-8
 
 " =============== Appearance ======================
 syntax on
+set background=light
+colorscheme solarized
 set number
 set numberwidth=5
 set visualbell
