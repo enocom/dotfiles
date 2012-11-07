@@ -22,6 +22,9 @@ set showtabline=2
 set wildmenu
 " Display tabs and trailing spaces
 set list listchars=tab:\ \ ,trail:·
+" highlight anything over 80 chars
+highlight OverLength ctermbg=red ctermfg=white
+match OverLength /\%81v.*/
 " Use syntax based code folding
 set foldmethod=syntax
 
