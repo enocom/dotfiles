@@ -12,7 +12,7 @@ set encoding=utf-8
 
 " =============== Appearance ======================
 syntax on
-set background=light
+set background=dark
 colorscheme solarized
 set number
 set numberwidth=5
