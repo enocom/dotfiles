@@ -66,6 +66,8 @@ inoremap jj <ESC>
 
 " unset last search pattern by hitting return
 nnoremap <CR> :noh<CR> <CR>
+" =============== Refresh Command-T files =================
+nnoremap <leader>tf :CommandTFlush<CR>
 
 " =============== changing windows ========================
 map <C-h> <C-w>h
