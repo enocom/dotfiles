@@ -85,12 +85,6 @@ endif
 nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
-" =============== xmpfilter ========================
-nmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
-xmap <buffer> <leader>m  <Plug>(xmpfilter-mark)
-nmap <buffer> <leader>e  <Plug>(xmpfilter-run)
-xmap <buffer> <leader>e  <Plug>(xmpfilter-run)
-
 " =============== tabs =============================
 map <leader>nt :tabnew<cr>
 map <leader>ct :tabclose<cr>
