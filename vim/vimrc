@@ -91,12 +91,3 @@ map <leader>ct :tabclose<cr>
 map <leader>ot :tabonly<cr>
 map <leader>xt :tabnext<cr>
 map <leader>pt :tabprevious<cr>
-
-" Show syntax highlighting groups for word under cursor
-nmap <C-P> :call <SID>SynStack()<CR>
-function! <SID>SynStack()
-  if !exists("*synstack")
-    return
-  endif
-  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
-endfunc
