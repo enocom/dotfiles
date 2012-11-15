@@ -28,6 +28,8 @@ highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.*/
 " Use syntax based code folding
 set foldmethod=syntax
+" set the tag file search order
+set tags=./tags;
 
 " =============== Search Settings ================
 set incsearch             " Find the next match as we type the search
