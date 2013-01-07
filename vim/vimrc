@@ -68,6 +68,10 @@ inoremap jj <ESC>
 
 " unset last search pattern by hitting return
 nnoremap <CR> :noh<CR> <CR>
+
+" for running ruby scripts with ease
+map <leader>r :w <bar> !ruby %<CR>
+
 " =============== Refresh Command-T files =================
 nnoremap <leader>tf :CommandTFlush<CR>
 
