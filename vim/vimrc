@@ -73,6 +73,9 @@ nnoremap <CR> :noh<CR> <CR>
 " for running ruby scripts with ease
 map <leader>r :w <bar> !ruby %<CR>
 
+" for running python scripts with ease
+map <leader>p :w <bar> !python %<CR>
+
 " =============== Refresh Command-T files =================
 nnoremap <leader>tf :CommandTFlush<CR>
 
