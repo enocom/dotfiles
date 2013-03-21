@@ -89,6 +89,8 @@ map <C-l> <C-w>l
 if bufwinnr(1)
   map + <C-W>+
   map - <C-W>-
+  map <leader>[ <C-w><
+  map <leader>] <C-w>>
 endif
 
 " =============== vimrc ========================
