@@ -12,8 +12,8 @@ set encoding=utf-8
 
 " =============== Appearance ======================
 syntax on
-set background=dark
-colorscheme solarized
+set background=light
+colorscheme default
 set number
 set ruler
 set numberwidth=5
