@@ -19,7 +19,7 @@ set ruler
 set numberwidth=5
 set visualbell
 " always display tabs
-set showtabline=2
+" set showtabline=2
 " shows possible completions above command line
 set wildmenu
 " Display tabs and trailing spaces
