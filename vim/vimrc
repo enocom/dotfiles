@@ -60,7 +60,7 @@ set hidden " allows for opening new without saving current buffer
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","
+let mapleader = " "
 " tempting remap of command key
 " nnoremap ; :
 
