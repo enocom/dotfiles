@@ -18,6 +18,7 @@ Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'rstacruz/sparkup'
+Bundle 'wookiehangover/jshint.vim'
 
 " =============== Appearance ======================
 syntax on
