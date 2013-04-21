@@ -17,8 +17,8 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
-Bundle 'rstacruz/sparkup'
 Bundle 'scrooloose/syntastic'
+Bundle 'mattn/zencoding-vim'
 
 " =============== Appearance ======================
 syntax on
