@@ -9,6 +9,8 @@ filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
 
+filetype plugin indent on
+
 " Let Vunlde manage Vundle
 Bundle 'gmarik/vundle'
 
@@ -19,6 +21,8 @@ Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'scrooloose/syntastic'
 Bundle 'mattn/zencoding-vim'
+Bundle 'tpope/vim-surround'
+Bundle 'tpope/vim-haml'
 
 " =============== Appearance ======================
 syntax on
@@ -64,8 +68,9 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" =============== hidden buffers ==================
+" =============== buffers ==========================
 set hidden " allows for opening new without saving current buffer
+map <leader>c :bp <bar> bd #<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
