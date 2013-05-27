@@ -30,7 +30,6 @@ set background=light
 colorscheme default
 set number
 set ruler
-set cursorline
 set numberwidth=5
 set visualbell
 " always display tabs
