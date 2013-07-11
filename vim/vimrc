@@ -19,14 +19,10 @@ Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
-Bundle 'scrooloose/syntastic'
-Bundle 'mattn/zencoding-vim'
-Bundle 'tpope/vim-surround'
-Bundle 'tpope/vim-haml'
 
 " =============== Appearance ======================
 syntax on
-set background=light
+set background=dark
 colorscheme default
 set number
 set ruler
@@ -56,6 +52,9 @@ set noswapfile
 set nobackup
 set nowb
 
+" save on lost focus, warning for untitled buffers
+au FocusLost * :wa
+
 " =============== Backspace Behavior ==============
 set backspace=indent,eol,start
 
@@ -68,31 +67,19 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-" =============== buffers ==========================
-set hidden " allows for opening new without saving current buffer
-map <leader>c :bp <bar> bd #<CR>
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = " "
-" tempting remap of command key
-" nnoremap ; :
+let mapleader = ","
 
 " remap ESC
 inoremap jj <ESC>
 
-" unset last search pattern by hitting return
-nnoremap <CR> :noh<CR> <CR>
+" unset last search pattern by hitting space
+nnoremap <space> :noh<CR> <CR>
 
 " for running ruby scripts with ease
 map <leader>r :w <bar> !ruby %<CR>
-
-" for running python scripts with ease
-map <leader>p :w <bar> !python %<CR>
-
-" =============== Refresh Command-T files =================
-nnoremap <leader>tf :CommandTFlush<CR>
 
 " =============== changing windows ========================
 map <C-h> <C-w>h
@@ -101,16 +88,11 @@ map <C-k> <C-w>k
 map <C-l> <C-w>l
 
 " =============== vimrc ========================
+" open vimrc
 nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
+" source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
-" =============== tabs =============================
-map <leader>nt :tabnew<cr>
-map <leader>ct :tabclose<cr>
-map <leader>ot :tabonly<cr>
-map <leader>xt :tabnext<cr>
-map <leader>pt :tabprevious<cr>
+map \ :NERDTreeToggle<CR>
 
-set relativenumber
-
-map <leader>\ :NERDTreeToggle<CR>
+let g:CommandTMatchWindowReverse=1
