@@ -21,7 +21,7 @@ Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'ggreer/the_silver_searcher'
+Bundle 'rking/ag.vim'
 
 " =============== Appearance ======================
 syntax on
