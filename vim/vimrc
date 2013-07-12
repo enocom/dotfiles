@@ -17,8 +17,11 @@ Bundle 'gmarik/vundle'
 " Define bundles via Github repos
 Bundle 'wincent/Command-T'
 Bundle 'scrooloose/nerdtree'
+Bundle 'scrooloose/nerdcommenter'
 Bundle 'msanders/snipmate.vim'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-surround'
+Bundle 'ggreer/the_silver_searcher'
 
 " =============== Appearance ======================
 syntax on
