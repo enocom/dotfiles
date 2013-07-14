@@ -4,11 +4,12 @@
 set nocompatible " turn off vi compatibility
 set encoding=utf-8
 
-" Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" VUNDLE
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
 set rtp+=~/.vim/bundle/vundle/
 call vundle#rc()
-
 filetype plugin indent on
 
 " Let Vunlde manage Vundle
@@ -23,7 +24,9 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'rking/ag.vim'
 
-" =============== Appearance ======================
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance and Behavior
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
 colorscheme default
@@ -31,34 +34,17 @@ set number
 set ruler
 set numberwidth=5
 set visualbell
-" always display tabs
-" set showtabline=2
-" shows possible completions above command line
-set wildmenu
-" Display tabs and trailing spaces
-set list listchars=tab:\ \ ,trail:·
-" highlight anything over 80 chars
+set wildmenu " shows possible completions above command line
+set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
+
+" highlight over 80 chars
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.*/
+
 " Use syntax based code folding
 set foldmethod=syntax
-" set the tag file search order
-set tags=./tags;
 
-" =============== Search Settings ================
-set incsearch             " Find the next match as we type the search
-set hlsearch              " Highlight searches by default
-set smartcase             " ignore case if lowercase, otherwise match case
-
-" =============== Turn off Swap Files ============
-set noswapfile
-set nobackup
-set nowb
-
-" save on lost focus, warning for untitled buffers
-au FocusLost * :wa
-
-" =============== Backspace Behavior ==============
+" Backspace Behavior
 set backspace=indent,eol,start
 
 " =============== Indentation =====================
@@ -71,7 +57,29 @@ set tabstop=2
 set expandtab
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Mappings
+" Ctags
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set tags=./tags;
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Search settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set incsearch             " Find the next match as we type the search
+set hlsearch              " Highlight searches by default
+set smartcase             " ignore case if lowercase, otherwise match case
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Saving and Backup
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set noswapfile
+set nobackup
+set nowb
+
+" save on lost focus, warning for untitled buffers
+au FocusLost * :wa
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Key Mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = ","
 
@@ -84,18 +92,26 @@ nnoremap <space> :noh<CR> <CR>
 " for running ruby scripts with ease
 map <leader>r :w <bar> !ruby %<CR>
 
-" =============== changing windows ========================
+" changing windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
 map <C-k> <C-w>k
 map <C-l> <C-w>l
 
-" =============== vimrc ========================
+" Opening and Sourcing vimrc
 " open vimrc
 nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
+" enable NERDTree
 map \ :NERDTreeToggle<CR>
 
+" toggle comment
+map <leader>/ <plug>NERDCommenterToggle
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" CommandT Settings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" display match at bottom of window
 let g:CommandTMatchWindowReverse=1
