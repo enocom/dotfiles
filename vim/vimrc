@@ -16,13 +16,15 @@ filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-Bundle 'wincent/Command-T'
-Bundle 'scrooloose/nerdtree'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'guns/vim-clojure-static'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'msanders/snipmate.vim'
+Bundle 'rking/ag.vim'
+Bundle 'scrooloose/nerdcommenter'
+Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'rking/ag.vim'
+Bundle 'wincent/Command-T'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance and Behavior
@@ -115,3 +117,24 @@ map <leader>/ <plug>NERDCommenterToggle
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " display match at bottom of window
 let g:CommandTMatchWindowReverse=1
+
+let g:rbpt_colorpairs = [
+         \ ['brown', 'RoyalBlue3'],
+         \ ['Darkblue',    'SeaGreen3'],
+         \ ['darkgray',    'DarkOrchid3'],
+         \ ['darkgreen',   'firebrick3'],
+         \ ['darkcyan',    'RoyalBlue3'],
+         \ ['darkred',     'SeaGreen3'],
+         \ ['darkmagenta', 'DarkOrchid3'],
+         \ ['brown',       'firebrick3'],
+         \ ['gray',        'RoyalBlue3'],
+         \ ['black',       'SeaGreen3'],
+         \ ['darkmagenta', 'DarkOrchid3'],
+         \ ['Darkblue',    'firebrick3'],
+         \ ['darkgreen',   'RoyalBlue3'],
+         \ ['darkcyan',    'SeaGreen3'],
+         \ ['darkred',     'DarkOrchid3'],
+         \ ['red',         'firebrick3'],
+         \ ]
+let g:rbpt_max = 16
+let g:rbpt_loadcmd_toggle = 0
