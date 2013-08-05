@@ -16,8 +16,6 @@ filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-Bundle 'guns/vim-clojure-static'
-Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdcommenter'
@@ -31,7 +29,7 @@ Bundle 'wincent/Command-T'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
-colorscheme default
+colorscheme desertink
 set number
 set ruler
 set numberwidth=5
@@ -42,9 +40,6 @@ set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
 " highlight over 80 chars
 highlight OverLength ctermbg=red ctermfg=white
 match OverLength /\%81v.*/
-
-" Use syntax based code folding
-set foldmethod=syntax
 
 " Backspace Behavior
 set backspace=indent,eol,start
