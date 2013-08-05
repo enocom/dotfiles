@@ -16,6 +16,7 @@ filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
+Bundle 'camelpunch/test_server'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdcommenter'
@@ -29,7 +30,7 @@ Bundle 'wincent/Command-T'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
-colorscheme desertink
+colorscheme solarized
 set number
 set ruler
 set numberwidth=5
@@ -101,11 +102,12 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
-" enable NERDTree
-map \ :NERDTreeToggle<CR>
-
 " toggle comment
 map <leader>/ <plug>NERDCommenterToggle
+
+map <leader>rt :RunTest<CR>
+map <leader>ra :RunTestAgain<CR>
+map <leader>rl :RunTestLine<CR>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CommandT Settings
