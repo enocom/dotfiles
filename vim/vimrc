@@ -24,6 +24,7 @@ Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
+Bundle 'thoughtbot/vim-rspec'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance and Behavior
@@ -45,7 +46,7 @@ match OverLength /\%81v.*/
 " Backspace Behavior
 set backspace=indent,eol,start
 
-" =============== Indentation =====================
+" Indentation
 set autoindent
 set smartindent
 set smarttab
@@ -115,6 +116,9 @@ map <leader>rl :RunTestLine<CR>
 " display match at bottom of window
 let g:CommandTMatchWindowReverse=1
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Rainbow Parentheses for Clojure dev
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:rbpt_colorpairs = [
          \ ['brown', 'RoyalBlue3'],
          \ ['Darkblue',    'SeaGreen3'],
