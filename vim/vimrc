@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'camelpunch/test_server'
+Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
 Bundle 'scrooloose/nerdcommenter'
