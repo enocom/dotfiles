@@ -16,16 +16,14 @@ filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
-Bundle 'camelpunch/test_server'
 Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
 Bundle 'wincent/Command-T'
-Bundle 'thoughtbot/vim-rspec'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance and Behavior
