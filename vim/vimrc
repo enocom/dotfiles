@@ -30,7 +30,7 @@ Bundle 'wincent/Command-T'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
-colorscheme solarized
+colorscheme default
 set number
 set ruler
 set numberwidth=5
