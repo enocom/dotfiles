@@ -17,6 +17,7 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'camelpunch/test_server'
+Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
@@ -24,7 +25,6 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-surround'
-Bundle 'wincent/Command-T'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance and Behavior
@@ -103,18 +103,9 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
-" toggle comment
-map <leader>/ <plug>NERDCommenterToggle
-
 map <leader>rt :RunTest<CR>
 map <leader>ra :RunTestAgain<CR>
 map <leader>rl :RunTestLine<CR>
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" CommandT Settings
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" display match at bottom of window
-let g:CommandTMatchWindowReverse=1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rainbow Parentheses for Clojure dev
