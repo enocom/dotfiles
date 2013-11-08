@@ -108,9 +108,16 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
+" Test server commands for Ruby specs
 map <leader>rt :RunTest<CR>
 map <leader>ra :RunTestAgain<CR>
 map <leader>rl :RunTestLine<CR>
+
+" close the quickfix window
+nmap <leader>c :cclose<cr>
+
+" Ag current word
+nmap <leader>a *:AgFromSearch<cr>
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rainbow Parentheses for Clojure dev
