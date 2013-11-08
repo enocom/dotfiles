@@ -25,6 +25,7 @@ Bundle 'rking/ag.vim'
 Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
+Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-surround'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
