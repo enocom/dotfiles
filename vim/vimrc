@@ -18,7 +18,9 @@ Bundle 'gmarik/vundle'
 " Define bundles via Github repos
 Bundle 'airblade/vim-gitgutter'
 Bundle 'camelpunch/test_server'
+Bundle 'guns/vim-clojure-static'
 Bundle 'kien/ctrlp.vim'
+Bundle 'kien/rainbow_parentheses.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
 Bundle 'rking/ag.vim'
@@ -26,6 +28,7 @@ Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-git'
 Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-commentary'
+Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -132,6 +135,11 @@ let g:rbpt_colorpairs = [
          \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
 
 " set gutter to same color as background
 highlight clear SignColumn
