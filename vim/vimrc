@@ -16,6 +16,7 @@ filetype plugin indent on
 Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
+Bundle 'airblade/vim-gitgutter'
 Bundle 'camelpunch/test_server'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
@@ -130,3 +131,7 @@ let g:rbpt_colorpairs = [
          \ ]
 let g:rbpt_max = 16
 let g:rbpt_loadcmd_toggle = 0
+
+" set gutter to same color as background
+highlight clear SignColumn
+
