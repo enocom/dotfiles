@@ -119,6 +119,8 @@ nmap <leader>c :cclose<cr>
 " Ag current word
 nmap <leader>a *:AgFromSearch<cr>
 
+nmap <leader>t :Eval (clojure.test/run-tests)<CR>
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Rainbow Parentheses for Clojure dev
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
