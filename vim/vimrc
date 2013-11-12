@@ -153,3 +153,4 @@ au Syntax * RainbowParenthesesLoadBraces
 " set gutter to same color as background
 highlight clear SignColumn
 
+let g:ctrlp_show_hidden = 1
