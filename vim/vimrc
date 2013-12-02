@@ -35,7 +35,7 @@ Bundle 'tpope/vim-surround'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on
 set background=dark
-colorscheme default
+colorscheme desert
 set number
 set ruler
 set numberwidth=5
