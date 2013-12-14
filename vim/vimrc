@@ -45,7 +45,7 @@ set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
 
 " highlight over 80 chars
 highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%81v.*/
+match OverLength /\%80v.*/
 
 " Backspace Behavior
 set backspace=indent,eol,start
@@ -123,7 +123,8 @@ nmap <leader>t :Eval (clojure.test/run-tests)<CR>
 " set gutter to same color as background
 highlight clear SignColumn
 
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.grunt\|node_modules'
+      \ 'dir':  '\.git$'
       \ }
 let g:ctrlp_show_hidden = 1
