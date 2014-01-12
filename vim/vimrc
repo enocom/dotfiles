@@ -29,6 +29,7 @@ Bundle 'tpope/vim-rails'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fireplace'
 Bundle 'tpope/vim-surround'
+Bundle 'vim-scripts/paredit.vim'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Appearance and Behavior
