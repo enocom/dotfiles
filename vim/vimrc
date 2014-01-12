@@ -43,10 +43,6 @@ set visualbell
 set wildmenu " shows possible completions above command line
 set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
 
-" highlight over 80 chars
-highlight OverLength ctermbg=red ctermfg=white
-match OverLength /\%80v.*/
-
 " Backspace Behavior
 set backspace=indent,eol,start
 
