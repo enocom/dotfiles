@@ -37,7 +37,6 @@ Bundle 'vim-scripts/paredit.vim'
 syntax on
 set background=dark
 colorscheme desert
-set number
 set ruler
 set numberwidth=5
 set visualbell
