@@ -17,7 +17,6 @@ Bundle 'gmarik/vundle'
 
 " Define bundles via Github repos
 Bundle 'airblade/vim-gitgutter'
-Bundle 'camelpunch/test_server'
 Bundle 'guns/vim-clojure-static'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
@@ -88,9 +87,6 @@ inoremap jj <ESC>
 " unset last search pattern by hitting space
 nnoremap <space> :noh<CR> <CR>
 
-" for running ruby scripts with ease
-map <leader>r :w <bar> !ruby %<CR>
-
 " changing windows
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -103,21 +99,11 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr> " open .vimrc
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr> " source .vimrc
 
-" Test server commands for Ruby specs
-map <leader>rt :RunTest<CR>
-map <leader>ra :RunTestAgain<CR>
-map <leader>rl :RunTestLine<CR>
-
 " close the quickfix window
 nmap <leader>c :cclose<cr>
 
 " Ag current word
 nmap <leader>a *:AgFromSearch<cr>
-
-nmap <leader>t :Eval (clojure.test/run-tests)<CR>
-
-" set gutter to same color as background
-highlight clear SignColumn
 
 set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 let g:ctrlp_custom_ignore = {
