@@ -1,6 +1,6 @@
 syntax on
 set background=dark
-colorscheme desert
+colorscheme default
 set ruler
 set numberwidth=5
 set visualbell
