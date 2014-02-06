@@ -1,6 +1,8 @@
 #!/bin/sh
 set -e
 
+echo "=== Installing Vim config files"
+
 if [[ -e $HOME/.vimrc || -e $HOME/.vim ]]; then
   echo "Error: ~/.vimrc or ~/.vim already exists."
 else
