@@ -1,6 +1,7 @@
 " Let Vunlde manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'jnwhiteh/vim-golang'
 Bundle 'kien/ctrlp.vim'
 Bundle 'mattn/emmet-vim'
 Bundle 'msanders/snipmate.vim'
