@@ -5,6 +5,7 @@ echo "=== Installing Vim config files"
 
 if [[ -e $HOME/.vimrc || -e $HOME/.vim ]]; then
   echo "Error: ~/.vimrc or ~/.vim already exists."
+  echo "Move them and then try again."
 else
   echo === Checking out vundle
   git submodule update --init
