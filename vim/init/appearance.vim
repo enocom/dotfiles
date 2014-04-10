@@ -1,5 +1,4 @@
 syntax on
-set background=dark
 colorscheme default
 set ruler
 set numberwidth=5
