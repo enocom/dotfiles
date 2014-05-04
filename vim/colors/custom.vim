@@ -4,7 +4,7 @@
 
 highlight clear
 
-let colors_name = "delek"
+let colors_name = "custom"
 
 " Normal should come first
 highlight Normal     guifg=Black  guibg=White
