@@ -1,5 +1,5 @@
 syntax on
-colorscheme delek
+colorscheme custom
 set ruler
 set numberwidth=5
 set visualbell
