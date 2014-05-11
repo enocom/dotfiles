@@ -9,12 +9,14 @@ filetype plugin indent on
 " Let Vunlde manage Vundle
 Bundle 'gmarik/vundle'
 
+Bundle 'camelpunch/test_server'
+Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
 
-"""""""""" appearance """"""""""
+" appearance
 syntax on
 colorscheme custom
 set ruler
@@ -73,15 +75,6 @@ nmap <leader>c :cclose<cr>
 " Ag current word
 nmap <leader>a *:AgFromSearch<cr>
 
-" easy tab movement
-map <left> :tabp<cr>
-map <right> :tabn<cr>
-
-" quick save/close/tab
-nmap <leader>s :w<cr>
-nmap <leader>q :q<cr>
-nmap <leader>T :tabnew<cr>
-
 " c-tags and ctrl-p
 nnoremap <leader>. :CtrlPTag<cr>
 
@@ -109,8 +102,6 @@ set hlsearch              " Highlight searches by default
 set smartcase             " ignore case if lowercase, otherwise match case
 
 " split panes
-" Courtesy of thoughtbot's vim-config
-" Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
 
