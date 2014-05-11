@@ -1,6 +1,6 @@
-" Vim color file
+" Vim color file based on delek
 " Maintainer:	Eno Compton <eno4@ecom.com>
-" Last Change: 2014 May 03
+" Last Change: 2014 May 11
 
 highlight clear
 
@@ -24,7 +24,7 @@ highlight PmenuSel      ctermfg=White 	     ctermbg=DarkBlue
 highlight Question      ctermfg=DarkGreen
 highlight Search        ctermfg=NONE  	     ctermbg=NONE cterm=underline
 highlight SpecialKey    ctermfg=DarkBlue
-highlight StatusLine    cterm=bold	         ctermbg=blue ctermfg=yellow
+highlight StatusLine    cterm=bold	         ctermbg=yellow ctermfg=black
 highlight StatusLineNC	cterm=bold	         ctermbg=blue ctermfg=black
 highlight Title         ctermfg=DarkMagenta
 highlight VertSplit     cterm=reverse
