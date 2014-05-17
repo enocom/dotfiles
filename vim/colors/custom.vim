@@ -14,7 +14,7 @@ highlight DiffText      ctermbg=Red	         cterm=bold
 highlight Directory     ctermfg=DarkBlue
 highlight ErrorMsg      ctermfg=White	       ctermbg=DarkRed
 highlight FoldColumn    ctermfg=DarkBlue	   ctermbg=Grey
-highlight Folded        ctermbg=Grey	       ctermfg=DarkBlue
+highlight Folded        ctermbg=none	       ctermfg=DarkBlue
 highlight IncSearch     cterm=NONE	         cterm=underline
 highlight LineNr        ctermfg=Brown
 highlight ModeMsg       cterm=bold
