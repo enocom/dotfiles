@@ -9,9 +9,9 @@ filetype plugin indent on
 " Let Vunlde manage Vundle
 Bundle 'gmarik/vundle'
 
-Bundle 'camelpunch/test_server'
 Bundle 'rking/ag.vim'
 Bundle 'kien/ctrlp.vim'
+Bundle 'thoughtbot/vim-rspec'
 Bundle 'tpope/vim-commentary'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-rails'
@@ -19,7 +19,7 @@ Bundle 'tpope/vim-rails'
 " appearance
 syntax on
 colorscheme solarized
-set background=light
+set background=dark
 set ruler
 set numberwidth=5
 set visualbell
@@ -78,10 +78,10 @@ nmap <leader>a *:AgFromSearch<cr>
 " c-tags and ctrl-p
 nnoremap <leader>. :CtrlPTag<cr>
 
-" bindings for test_server
-map  <F12> :w<CR>:RunTest<CR>
-map  <F11> :w<CR>:RunTestLine<CR>
-map  <F10> :w<CR>:RunTestAgain<CR>
+" RSpec.vim mappings
+map <leader>t :call RunCurrentSpecFile()<CR>
+map <leader>s :call RunNearestSpec()<CR>
+map <leader>l :call RunLastSpec()<CR>
 
 " saving
 set noswapfile
