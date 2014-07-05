@@ -3,18 +3,20 @@ set encoding=utf-8
 
 filetype off
 set rtp+=~/.vim/bundle/vundle/,$GOROOT/misc/vim
-call vundle#rc()
+call vundle#begin()
 filetype plugin indent on
 
 " Let Vunlde manage Vundle
-Bundle 'gmarik/vundle'
+Plugin 'gmarik/vundle'
 
-Bundle 'rking/ag.vim'
-Bundle 'kien/ctrlp.vim'
-Bundle 'thoughtbot/vim-rspec'
-Bundle 'tpope/vim-commentary'
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
+Plugin 'rking/ag.vim'
+Plugin 'kien/ctrlp.vim'
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-commentary'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
+
+call vundle#end()
 
 " appearance
 syntax on
