@@ -18,7 +18,7 @@ Bundle 'tpope/vim-rails'
 
 " appearance
 syntax on
-colorscheme solarized
+colorscheme molokai
 set background=dark
 set ruler
 set numberwidth=5
