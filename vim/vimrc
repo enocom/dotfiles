@@ -9,9 +9,9 @@ filetype plugin indent on
 " Let Vunlde manage Vundle
 Plugin 'gmarik/vundle'
 
+Plugin 'camelpunch/test_server'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
-Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-rails'
@@ -80,10 +80,15 @@ nmap <leader>a *:AgFromSearch<cr>
 " c-tags and ctrl-p
 nnoremap <leader>. :CtrlPTag<cr>
 
-" RSpec.vim mappings
-map <leader>t :call RunCurrentSpecFile()<CR>
-map <leader>s :call RunNearestSpec()<CR>
-map <leader>l :call RunLastSpec()<CR>
+" test_server mappings
+map   <F12> :w<CR>:RunTest<CR>
+imap  <F12> <ESC><F12>
+map   <F11> :w<CR>:RunTestLine<CR>
+imap  <F11> <ESC><F11>
+map   <F10> :w<CR>:RunTestAgain<CR>
+imap  <F10> <ESC><F10>
+map   <F9> :w<CR>:RunTestPrevious<CR>
+imap  <F9> <ESC><F9>
 
 " saving
 set noswapfile
