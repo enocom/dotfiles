@@ -2,20 +2,20 @@ set nocompatible
 set encoding=utf-8
 
 filetype off
-set rtp+=~/.vim/bundle/vundle/,$GOROOT/misc/vim
+
+set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
-filetype plugin indent on
-
-" Let Vunlde manage Vundle
-Plugin 'gmarik/vundle'
-
+Plugin 'gmarik/vundle' " Let Vunlde manage Vundle
 Plugin 'camelpunch/test_server'
+Plugin 'fatih/vim-go'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
 
 call vundle#end()
+
+filetype plugin indent on
 
 " appearance
 syntax on
@@ -77,9 +77,6 @@ nmap <leader>c :cclose<cr>
 
 " Ag current word
 nmap <leader>a *:AgFromSearch<cr>
-
-" c-tags and ctrl-p
-nnoremap <leader>. :CtrlPTag<cr>
 
 " test_server mappings
 map   <F12> :w<CR>:RunTest<CR>
