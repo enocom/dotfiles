@@ -22,7 +22,7 @@ call vundle#end()
 
 " appearance
 syntax on
-colorscheme molokai
+colorscheme default
 set background=dark
 set ruler
 set numberwidth=5
@@ -38,9 +38,10 @@ set backspace=indent,eol,start
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$'
+      \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
       \ }
 let g:ctrlp_show_hidden = 1
+" let g:ctrlp_user_command = "find . | grep -v node_modules | grep -v .git/"
 
 " indentation
 set autoindent
