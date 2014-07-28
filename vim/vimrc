@@ -91,6 +91,11 @@ imap  <F10> <ESC><F10>
 map   <F9> :w<CR>:RunTestPrevious<CR>
 imap  <F9> <ESC><F9>
 
+" vim-go mappings
+au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
+au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
+
 " saving
 set noswapfile
 set nobackup
