@@ -48,9 +48,10 @@ set shiftwidth=2
 set softtabstop=2
 set tabstop=2
 set expandtab
-au FileType ruby    set expandtab tabstop=2 softtabstop=2
-au FileType python  set expandtab tabstop=4 softtabstop=4
-au FileType go      set expandtab tabstop=8 softtabstop=8
+au FileType ruby    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType python  set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au FileType go      set expandtab tabstop=8 softtabstop=8 shiftwidth=8
+
 
 " key bindings
 let mapleader = ","
