@@ -30,6 +30,9 @@ set number
 set showtabline=2
 let loaded_matchparen=1 " turn off match paren highlighting
 
+" strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
 " backspace
 set backspace=indent,eol,start
 
@@ -50,11 +53,16 @@ set tabstop=2
 set expandtab
 au FileType ruby    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType python  set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-au FileType go      set expandtab tabstop=8 softtabstop=8 shiftwidth=8
+au FileType html    set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au FileType javasript    set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au FileType go      set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 
 " key bindings
 let mapleader = ","
+
+" shortcut to run ruby script
+map <leader>r :w <bar> !ruby %<CR>
 
 " remap ESC to jj
 inoremap jj <ESC>
