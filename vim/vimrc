@@ -63,7 +63,7 @@ au FileType go      set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 let mapleader = ","
 
 " shortcut to run ruby script
-map <leader>r :w <bar> !ruby %<CR>
+map <leader>r :w <bar> !rspec --color %<CR>
 
 " remap ESC to jj
 inoremap jj <ESC>
