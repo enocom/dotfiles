@@ -7,7 +7,6 @@ set rtp+=~/.vim/bundle/vundle
 call vundle#begin()
 Plugin 'gmarik/vundle' " Let Vunlde manage Vundle
 Plugin 'camelpunch/test_server'
-Plugin 'fatih/vim-go'
 Plugin 'rking/ag.vim'
 Plugin 'kien/ctrlp.vim'
 Plugin 'tpope/vim-commentary'
