@@ -37,10 +37,12 @@ set backspace=indent,eol,start
 
 " ctrl-p
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
-      \ }
+            \ 'file': '\v\.(pyc)$',
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
+            \ }
 let g:ctrlp_show_hidden = 1
-" let g:ctrlp_user_command = "find . | grep -v node_modules | grep -v .git/"
+" stop setting git repo as root path
+let g:ctrlp_working_path_mode = ''
 
 " indentation
 set autoindent
