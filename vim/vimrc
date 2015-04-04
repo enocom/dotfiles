@@ -4,14 +4,15 @@ set encoding=utf-8
 filetype off
 
 set rtp+=~/.vim/bundle/vundle
+
 call vundle#begin()
-Plugin 'gmarik/vundle' " Let Vunlde manage Vundle
+Plugin 'gmarik/vundle' " Let Vundle manage Vundle
 Plugin 'camelpunch/test_server'
-Plugin 'rking/ag.vim'
+Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
-
 call vundle#end()
 
 filetype plugin indent on
@@ -53,16 +54,16 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 au FileType ruby    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-au FileType python  set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-au FileType html    set expandtab tabstop=4 softtabstop=4 shiftwidth=4
-au FileType javasript    set expandtab tabstop=4 softtabstop=4 shiftwidth=4
+au FileType python  set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType html    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType javasript    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType go      set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 
 " key bindings
 let mapleader = ","
 
-" shortcut to run ruby script
+" shortcut to run rspec
 map <leader>r :w <bar> !rspec --color %<CR>
 
 " remap ESC to jj
