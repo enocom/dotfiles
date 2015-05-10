@@ -28,7 +28,6 @@ set visualbell
 set wildmenu " shows possible completions above command line
 set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
 set number
-set showtabline=2
 let loaded_matchparen=1 " turn off match paren highlighting
 
 " strip trailing whitespace on save
