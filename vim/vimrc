@@ -56,7 +56,7 @@ set expandtab
 au FileType ruby    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType python  set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType html    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
-au FileType javasript    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
+au FileType javascript    set expandtab tabstop=2 softtabstop=2 shiftwidth=2
 au FileType go      set expandtab tabstop=4 softtabstop=4 shiftwidth=4
 
 
