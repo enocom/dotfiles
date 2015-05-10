@@ -10,6 +10,7 @@ Plugin 'gmarik/vundle' " Let Vundle manage Vundle
 Plugin 'camelpunch/test_server'
 Plugin 'fatih/vim-go'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/emmet-vim'
 Plugin 'rking/ag.vim'
 Plugin 'tpope/vim-commentary'
 Plugin 'tpope/vim-fugitive'
