@@ -83,6 +83,9 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr>
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr>
 
+" insert a hash rocket
+imap <c-l> <space>=><space>
+
 " close the quickfix window
 nmap <leader>c :cclose<cr>
 
