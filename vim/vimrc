@@ -30,7 +30,7 @@ set number
 let loaded_matchparen=1 " turn off match paren highlighting
 
 " strip trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
+let g:strip_whitespace_on_save=1
 
 " backspace
 set backspace=indent,eol,start
