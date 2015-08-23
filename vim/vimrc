@@ -56,8 +56,6 @@ set expandtab
 " key bindings
 let mapleader = ","
 
-" shortcut to run rspec
-map <leader>r :w <bar> !rspec --color %<CR>
 " unset last search pattern by hitting space
 nnoremap <space> :noh<CR> <CR>
 
@@ -72,24 +70,11 @@ nmap <silent> <leader>ev :e  $MYVIMRC<cr>
 " source vimrc
 nmap <silent> <leader>ee :so $MYVIMRC<cr>
 
-" insert a hash rocket
-imap <c-l> <space>=><space>
-
 " close the quickfix window
 nmap <leader>c :cclose<cr>
 
 " Ag current word
 nmap <leader>a *:AgFromSearch<cr>
-
-" test_server mappings
-map   <F12> :w<CR>:RunTest<CR>
-imap  <F12> <ESC><F12>
-map   <F11> :w<CR>:RunTestLine<CR>
-imap  <F11> <ESC><F11>
-map   <F10> :w<CR>:RunTestAgain<CR>
-imap  <F10> <ESC><F10>
-map   <F9> :w<CR>:RunTestPrevious<CR>
-imap  <F9> <ESC><F9>
 
 " vim-go mappings
 au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
