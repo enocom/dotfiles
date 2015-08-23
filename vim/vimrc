@@ -58,10 +58,6 @@ let mapleader = ","
 
 " shortcut to run rspec
 map <leader>r :w <bar> !rspec --color %<CR>
-
-" remap ESC to jj
-inoremap jj <ESC>
-
 " unset last search pattern by hitting space
 nnoremap <space> :noh<CR> <CR>
 
