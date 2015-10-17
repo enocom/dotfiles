@@ -1,6 +1,6 @@
 # global environment variables
 export GOROOT="/usr/local/go"
-export GOPATH="$HOME/code/go"
+export GOPATH="$HOME/workspace/go"
 export JAVA_HOME=$(/usr/libexec/java_home)
 
 # various path assignments
