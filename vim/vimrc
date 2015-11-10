@@ -20,7 +20,7 @@ filetype plugin indent on
 " appearance
 syntax on
 colorscheme default
-set background=dark
+set background=light
 set ruler
 set numberwidth=5
 set visualbell
