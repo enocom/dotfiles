@@ -22,3 +22,18 @@ export CLICOLOR=1
 
 export HISTSIZE=10000 # increase the size
 shopt -s histappend # append session commands to .bash_history
+
+#==========================================================================
+# Prompt
+#==========================================================================
+
+function dirty_state {
+  [[ $(git status --porcelain 2> /dev/null) ]] && echo "*"
+}
+
+RED='\[\e[1;31m\]'
+NO_COLOR='\[\e[0m\]'
+DIRTY_STATE='$(dirty_state)'
+
+# assign new colorized prompt
+export PS1="\h:\W$RED$DIRTY_STATE$NO_COLOR \u\$ "
