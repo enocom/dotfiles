@@ -38,6 +38,7 @@ function dirty_state {
 RED='\[\e[1;31m\]'
 NO_COLOR='\[\e[0m\]'
 DIRTY_STATE='$(dirty_state)'
+YELLOW='\[\e[0;33m\]'
 
 # assign new colorized prompt
-export PS1="\h:\W$RED$DIRTY_STATE$NO_COLOR \u\$ "
+export PS1="\W$RED$DIRTY_STATE$NO_COLOR$YELLOW \$$NO_COLOR "
