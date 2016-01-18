@@ -1,12 +1,12 @@
 #==========================================================================
-# Source bashrc and aliases if present
+# Source bashrc and current if present
 #==========================================================================
 
-if [ -f ~/.aliases ]; then
+if [ -r ~/.aliases ]; then
   source ~/.aliases
 fi
 
-if [ -f ~/.current ]; then
+if [ -r ~/.current ]; then
   source ~/.current
 fi
 
