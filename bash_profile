@@ -41,4 +41,4 @@ DIRTY_STATE='$(dirty_state)'
 YELLOW='\[\e[0;33m\]'
 
 # assign new colorized prompt
-export PS1="\W$RED$DIRTY_STATE$NO_COLOR$YELLOW \$$NO_COLOR "
+export PS1="$RED$DIRTY_STATE$NO_COLOR$YELLOW\$$NO_COLOR "
