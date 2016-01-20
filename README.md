@@ -6,18 +6,16 @@ Here are a handful of dotfiles set up to my taste.
 INSTALLATION
 ------------
 
-Install with the following commands:
+First, clone the repo:
 
-``` bash
-# change to the home directory
-cd
-
-# clone into ~/dotfiles directory
-git clone http://github.com/enocom/dotfiles.git
-
-# backup old bash profile if necessary
-mv .bash_profile .bash_profile_old
-
-# setup symbolic links
-ln -s dotfiles/bash_profile ~/.bash_profile
 ```
+git clone http://github.com/enocom/dotfiles.git
+```
+
+After navigating to the repo's root directory, link the `bashprofile` and `aliases` with the handy `install.sh` script.
+
+```
+cd dotfiles
+./install.sh
+```
+
