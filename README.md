@@ -9,7 +9,7 @@ INSTALLATION
 First, clone the repo:
 
 ```
-git clone http://github.com/enocom/dotfiles.git
+git clone https://github.com/enocom/dotfiles.git
 ```
 
 After navigating to the repo's root directory, link the `bash_profile` and `aliases` with the handy `install.sh` script.
