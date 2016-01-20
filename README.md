@@ -1,8 +1,8 @@
-# INTRODUCTION
+# Introduction
 
 Here are a handful of dotfiles set up to my taste.
 
-# INSTALLATION
+# Installation
 
 First, clone the repo:
 
