@@ -1,0 +1,4 @@
+Host *
+    # Fixing CVE-2016-0777
+    UseRoaming no
+
