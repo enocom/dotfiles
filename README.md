@@ -19,8 +19,10 @@ cd dotfiles
 
 # Odds and Ends
 
-The `colors` file is an executable script to show all colors in a terminal profile.
+The `colors` file is an executable script to show all colors in a terminal profile. Run it with:
 
-If you look in the `terminal_profiles` directory, you will find three good color profiles for the Terminal.app in OS X and as well as a good color profile for iTerm.app.
+```
+./colors
+```
 
-Finally, the `config` file is for the `ssh` program and should be placed in the following directory: `~/.ssh/`.
+If you look in the `terminal_profiles` directory, you will find three good color profiles for Terminal.app in OS X and as well as a good color profile for iTerm.app.
