@@ -19,6 +19,8 @@ cd dotfiles
 
 # Odds and Ends
 
+There is no `bashrc` file in this repository, although the `bash_profile` will attempt to source a `.bashrc` file if it exists in the home directory. I put various `PATH` assignments and temporary environment variables in the `.bashrc` and leave it outside of the repo here so as to avoid polluting these files with arbitrary and passing experiments.
+
 The `colors` file is an executable script to show all colors in a terminal profile. Run it with:
 
 ```
