@@ -1,41 +1,31 @@
-set nocompatible
-set encoding=utf-8
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" General
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set encoding=utf-8 " Ensure encoding is UTF-8
+set nocompatible   " Disable Vi compatability
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vundle Config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 filetype off
+set rtp+=~/.vim/bundle/vundle " Set the runtime path to include Vundle
+call vundle#begin()           " Initialize vundle
+Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
+Plugin 'kien/ctrlp.vim'       " Quick file navigation
+Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
+Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
+Plugin 'fatih/vim-go'         " A nice plugin for Go development
+call vundle#end()             " Complete vunde initialization
 
-set rtp+=~/.vim/bundle/vundle
-
-call vundle#begin()
-Plugin 'gmarik/vundle' " Let Vundle manage Vundle
-Plugin 'fatih/vim-go'
-Plugin 'kien/ctrlp.vim'
-Plugin 'mattn/emmet-vim'
-Plugin 'rking/ag.vim'
-Plugin 'tpope/vim-commentary'
-Plugin 'tpope/vim-fugitive'
-call vundle#end()
-
+" enable filetype detection
+" and indent detection (based on filetype)
 filetype plugin indent on
 
-" appearance
-syntax on
-colorscheme default
-set background=light
-set ruler
-set numberwidth=5
-set visualbell
-set wildmenu " shows possible completions above command line
-set list listchars=tab:\ \ ,trail:· " Display tabs and trailing spaces
-set number
-let loaded_matchparen=1 " turn off match paren highlighting
 
-" strip trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
-
-" backspace
-set backspace=indent,eol,start
-
-" ctrl-p
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" ctrl-p config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(pyc)$',
             \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
@@ -44,47 +34,39 @@ let g:ctrlp_show_hidden = 1
 " stop setting git repo as root path
 let g:ctrlp_working_path_mode = ''
 
-" indentation
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=2
-set softtabstop=2
-set tabstop=2
-set expandtab
 
-" key bindings
-let mapleader = ","
-
-" unset last search pattern by hitting space
-nnoremap <space> :noh<CR> <CR>
-
-" changing windows
-map <C-h> <C-w>h
-map <C-j> <C-w>j
-map <C-k> <C-w>k
-map <C-l> <C-w>l
-
-" open vimrc
-nmap <silent> <leader>ev :e  $MYVIMRC<cr>
-" source vimrc
-nmap <silent> <leader>ee :so $MYVIMRC<cr>
-
-" close the quickfix window
-nmap <leader>c :cclose<cr>
-
-" Ag current word
-nmap <leader>a *:AgFromSearch<cr>
-
-" vim-go mappings
-au Filetype go nnoremap <leader>v :vsp <CR>:exe "GoDef" <CR>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-go config
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 au Filetype go nnoremap <leader>s :sp <CR>:exe "GoDef"<CR>
-au Filetype go nnoremap <leader>t :tab split <CR>:exe "GoDef"<CR>
 
 " vim-go settings
 let g:go_fmt_command = "goimports"
 
-" saving
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Appearance
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+syntax on                      " enable syntax highlighting
+colorscheme default            " set color scheme
+set background=light           " assume a light background
+set ruler                      " show ruler in lower right
+set number                     " show line numbers
+set numberwidth=3              " use three spaces for line numbers
+let loaded_matchparen=1        " turn off match paren highlighting
+
+set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Behavior
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+autocmd BufWritePre * :%s/\s\+$//e  " strip trailing whitespace on save
+
+set wildmenu                   " show possible completions above command line
+set backspace=indent,eol,start " configure backspace behavior
+
+" disable various backup files
 set noswapfile
 set nobackup
 set nowb
@@ -93,30 +75,37 @@ set nowb
 au BufLeave * silent! wall
 
 " searching
-set incsearch             " Find the next match as we type the search
-set hlsearch              " Highlight searches by default
-set smartcase             " ignore case if lowercase, otherwise match case
+set smartcase " ignore case if lowercase, otherwise match case
 
-" split panes
+" split panes below or to the right
 set splitbelow
 set splitright
 
-" tags
-set tags=./tags;
+" indentation, spaces only, convert tabs
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
 
-" wildignore
-set wildignore+=*/tmp/*,*.so,*.swp,*.zip
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RENAME CURRENT FILE (thanks Gary Bernhardt)
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <Leader>n :call RenameFile()<cr>
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Leader Shortcuts
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = "," " Use better map leader
+
+" change windows easily
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" quickly Open vimrc
+nmap <silent> <leader>ev :edit $MYVIMRC<cr>
+" load vimrc into memory
+nmap <silent> <leader>ee :source $MYVIMRC<cr>
+
+" close the quickfix window
+nmap <leader>c :cclose<cr>
