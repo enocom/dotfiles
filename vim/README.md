@@ -1,6 +1,6 @@
 # vim-config
 
-A minimal vim-config.
+A minimal vim-config with annotations.
 
 ## Installation
 
