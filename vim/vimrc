@@ -15,7 +15,6 @@ Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
 Plugin 'kien/ctrlp.vim'       " Quick file navigation
 Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
-Plugin 'fatih/vim-go'         " A nice plugin for Go development
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
