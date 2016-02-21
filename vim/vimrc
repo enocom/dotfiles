@@ -40,7 +40,7 @@ let g:ctrlp_working_path_mode = ''
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=light           " assume a light background
+set background=dark           " assume a light background
 set ruler                      " show ruler in lower right
 set number                     " show line numbers
 set numberwidth=3              " use three spaces for line numbers
