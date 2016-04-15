@@ -44,9 +44,8 @@ let g:go_fmt_command = "goimports"
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=dark           " assume a light background
+set background=dark            " assume a light background
 set ruler                      " show ruler in lower right
-set number                     " show line numbers
 set numberwidth=3              " use three spaces for line numbers
 let loaded_matchparen=1        " turn off match paren highlighting
 
