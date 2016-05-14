@@ -28,7 +28,7 @@ filetype plugin indent on
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:ctrlp_custom_ignore = {
             \ 'file': '\v\.(pyc)$',
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
+            \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules|\.stack-work'
             \ }
 let g:ctrlp_show_hidden = 1
 " stop setting git repo as root path
