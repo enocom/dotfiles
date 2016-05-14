@@ -55,7 +55,10 @@ set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Behavior
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-autocmd BufWritePre * :%s/\s\+$//e  " strip trailing whitespace on save
+" strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+" save on lost focus, warning for untitled buffers
+autocmd BufLeave * silent! wall
 
 set wildmenu                   " show possible completions above command line
 set backspace=indent,eol,start " configure backspace behavior
@@ -64,9 +67,6 @@ set backspace=indent,eol,start " configure backspace behavior
 set noswapfile
 set nobackup
 set nowb
-
-" save on lost focus, warning for untitled buffers
-au BufLeave * silent! wall
 
 " searching
 set smartcase " ignore case if lowercase, otherwise match case
