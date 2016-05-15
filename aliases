@@ -13,8 +13,3 @@ alias gd="git diff"
 alias gds="git diff --staged"
 alias gl="git log"
 alias chead="git commit --amend -CHEAD"
-
-# Utilities
-alias eda="emacs --daemon"
-alias e="emacsclient -t"
-alias ek="emacsclient -e '(kill-emacs)'"
