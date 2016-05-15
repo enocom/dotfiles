@@ -10,6 +10,7 @@ alias gs="git status"
 alias ga="git add"
 alias gc="git commit -v"
 alias gd="git diff"
+alias gds="git diff --staged"
 alias gl="git log"
 alias chead="git commit --amend -CHEAD"
 
