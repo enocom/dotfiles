@@ -16,6 +16,7 @@ Plugin 'ctrlpvim/ctrlp.vim'   " Quick file navigation
 Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
 Plugin 'fatih/vim-go'
+Plugin 'ElmCast/elm-vim'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
