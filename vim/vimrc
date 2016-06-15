@@ -4,7 +4,6 @@
 set encoding=utf-8 " Ensure encoding is UTF-8
 set nocompatible   " Disable Vi compatability
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vundle Config
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -15,14 +14,12 @@ Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
 Plugin 'ctrlpvim/ctrlp.vim'   " Quick file navigation
 Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
-Plugin 'fatih/vim-go'
-Plugin 'ElmCast/elm-vim'
+Plugin 'fatih/vim-go'         " Helpful plugin for Golang dev
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
 " and indent detection (based on filetype)
 filetype plugin indent on
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrl-p config
@@ -49,9 +46,7 @@ set background=dark            " assume a dark background
 set ruler                      " show ruler in lower right
 set numberwidth=3              " use three spaces for line numbers
 let loaded_matchparen=1        " turn off match paren highlighting
-
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Behavior
@@ -85,7 +80,6 @@ set softtabstop=2
 set tabstop=2
 set expandtab
 
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Leader Shortcuts
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -101,6 +95,5 @@ map <C-l> <C-w>l
 nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
-
 " close the quickfix window
 nmap <leader>c :cclose<cr>
