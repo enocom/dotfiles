@@ -100,3 +100,7 @@ nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
 " close the quickfix window
 nmap <leader>c :cclose<cr>
+" go to next quick fix window entry
+map <C-n> :cn<CR>
+" go to previous quick fix window entry
+map <C-m> :cp<CR>
