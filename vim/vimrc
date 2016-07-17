@@ -56,6 +56,8 @@ autocmd BufWritePre * :%s/\s\+$//e
 " save on lost focus, warning for untitled buffers
 autocmd BufLeave * silent! wall
 
+set autowrite
+
 set wildmenu                   " show possible completions above command line
 set backspace=indent,eol,start " configure backspace behavior
 
