@@ -28,7 +28,6 @@ Plugin 'ctrlpvim/ctrlp.vim'   " Quick file navigation
 Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
 Plugin 'fatih/vim-go'         " Helpful plugin for Golang dev
-Plugin 'airblade/vim-gitgutter' " Shows git dirty state in gutter
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
