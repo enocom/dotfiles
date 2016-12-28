@@ -71,8 +71,8 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 " APPEARANCE
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
-colorscheme default            " set color scheme
-set background=dark            " assume a dark background
+colorscheme solarized          " set color scheme
+set background=light           " assume a dark background
 set ruler                      " show ruler in lower right
 set number                     " show line numbers
 set hlsearch                   " highlight all search results
