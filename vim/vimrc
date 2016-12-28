@@ -48,6 +48,8 @@ let g:ctrlp_working_path_mode = ''
 "------------------------------------------------------------------------------
 " VIM-GO CONFIG
 "------------------------------------------------------------------------------
+" create new go files with template
+let g:go_template_autocreate = 0
 let g:go_fmt_command = "goimports"
 autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
