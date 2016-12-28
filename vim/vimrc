@@ -74,9 +74,8 @@ syntax on                      " enable syntax highlighting
 colorscheme solarized          " set color scheme
 set background=light           " assume a dark background
 set ruler                      " show ruler in lower right
-set number                     " show line numbers
 set hlsearch                   " highlight all search results
-set numberwidth=3              " use three spaces for line numbers
+set colorcolumn=80             " highlight col 80
 let loaded_matchparen=1        " turn off match paren highlighting
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 
