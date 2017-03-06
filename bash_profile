@@ -18,7 +18,7 @@ fi
 export EDITOR=vim
 
 # Make ls use colors
-export CLICOLOR=1
+# export CLICOLOR=1
 
 #==========================================================================
 # Prompt
@@ -31,7 +31,6 @@ function dirty_state {
 RED='\[\e[1;31m\]'
 NO_COLOR='\[\e[0m\]'
 DIRTY_STATE='$(dirty_state)'
-YELLOW='\[\e[0;33m\]'
 
 # assign new colorized prompt
-export PS1="$RED$DIRTY_STATE$NO_COLOR$YELLOW\$$NO_COLOR "
+export PS1="$RED$DIRTY_STATE$NO_COLOR$NO_COLOR\$ "
