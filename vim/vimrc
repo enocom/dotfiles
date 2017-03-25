@@ -28,7 +28,6 @@ Plugin 'ctrlpvim/ctrlp.vim'   " Quick file navigation
 Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
 Plugin 'fatih/vim-go'         " Helpful plugin for Golang dev
-Plugin 'altercation/vim-colors-solarized'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
@@ -51,9 +50,6 @@ let g:ctrlp_working_path_mode = ''
 " create new go files with template
 let g:go_template_autocreate = 0
 let g:go_fmt_command = "goimports"
-autocmd FileType go nmap <Leader>dt <Plug>(go-def-tab)
-autocmd FileType go nmap <leader>r  <Plug>(go-run)
-autocmd FileType go nmap <leader>t  <Plug>(go-test)
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -64,18 +60,17 @@ function! s:build_go_files()
     call go#cmd#Build(0)
   endif
 endfunction
-
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 
 "------------------------------------------------------------------------------
 " APPEARANCE
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
-colorscheme solarized          " set color scheme
-set background=light           " assume a dark background
+colorscheme default            " set color scheme
+" set background=dark            " assume a dark background
+set background=light           " assume a light background
 set ruler                      " show ruler in lower right
 set hlsearch                   " highlight all search results
-set colorcolumn=80             " highlight col 80
 let loaded_matchparen=1        " turn off match paren highlighting
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 
@@ -121,9 +116,6 @@ map <C-l> <C-w>l
 nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
+
 " close the quickfix window
 nmap <leader>c :cclose<cr>
-" go to next quick fix window entry
-map <C-n> :cn<CR>
-" go to previous quick fix window entry
-map <C-m> :cp<CR>
