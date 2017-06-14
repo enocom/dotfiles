@@ -24,7 +24,7 @@ echo -e "\033[1;34m BRIGHT_BLUE (12)"
 
 echo
 echo -e "\033[0;35m MAGENTA (5)"
-echo -e "\033[1;35m BRIGHT_PURPLE (13)"
+echo -e "\033[1;35m BRIGHT_MAGENTA (13)"
 
 echo
 echo -e "\033[0;36m CYAN (6)"

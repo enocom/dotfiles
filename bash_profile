@@ -32,6 +32,7 @@ RED='\[\e[1;31m\]'
 NO_COLOR='\[\e[0m\]'
 DIRTY_STATE='$(dirty_state)'
 YELLOW='\[\e[0;33m\]'
+BRIGHT_BLACK='\[\e[1;30m\]'
 
 # assign new colorized prompt
-export PS1="$RED$DIRTY_STATE$NO_COLOR\$$NO_COLOR "
+export PS1="$RED$DIRTY_STATE$BRIGHT_BLACK$BRIGHT_BLACK\$$NO_COLOR "
