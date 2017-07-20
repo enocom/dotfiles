@@ -14,7 +14,7 @@
 
 # vim-config
 
-A minimal vim-config with annotations under 100 lines.
+A minimal vim-config with annotations at just about 100 lines.
 
 ## Installation
 

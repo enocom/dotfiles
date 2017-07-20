@@ -9,8 +9,6 @@
 "      | |/ / / / / / / /_____/ /__/ /_/ / / / / __/ / /_/ /
 "      |___/_/_/ /_/ /_/      \___/\____/_/ /_/_/ /_/\__, /
 "                                                   /____/
-"
-
 "------------------------------------------------------------------------------
 " GENERAL
 "------------------------------------------------------------------------------
@@ -37,17 +35,16 @@ filetype plugin indent on
 "------------------------------------------------------------------------------
 " CTRL-P CONFIG
 "------------------------------------------------------------------------------
+" ignore anything not tracked by git
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_show_hidden = 1
-" stop setting git repo as root path
-let g:ctrlp_working_path_mode = ''
+let g:ctrlp_show_hidden = 1        " include hidden files in results
+let g:ctrlp_working_path_mode = '' " stop setting git repo as root path
 
 "------------------------------------------------------------------------------
 " VIM-GO CONFIG
 "------------------------------------------------------------------------------
-" create new go files with template
-let g:go_template_autocreate = 0
-let g:go_fmt_command = "goimports"
+let g:go_template_autocreate = 0   " disable template for new files
+let g:go_fmt_command = "goimports" " run goimports after gofmt
 
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
@@ -65,7 +62,6 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-" set background=dark            " assume a dark background
 set background=light           " assume a light background
 set ruler                      " show ruler in lower right
 set hlsearch                   " highlight all search results
@@ -115,9 +111,6 @@ map <C-l> <C-w>l
 nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
-
-" close the quickfix window
-nmap <leader>c :cclose<cr>
 
 " allow for quick swapping between dark and light background
 map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
