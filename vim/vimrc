@@ -37,9 +37,7 @@ filetype plugin indent on
 "------------------------------------------------------------------------------
 " CTRL-P CONFIG
 "------------------------------------------------------------------------------
-let g:ctrlp_custom_ignore = {
-            \ 'dir':  '\v[\/]\.(git|hg|svn)$|node_modules'
-            \ }
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 let g:ctrlp_show_hidden = 1
 " stop setting git repo as root path
 let g:ctrlp_working_path_mode = ''
