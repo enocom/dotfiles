@@ -118,3 +118,6 @@ nmap <silent> <leader>ee :source $MYVIMRC<cr>
 
 " close the quickfix window
 nmap <leader>c :cclose<cr>
+
+" allow for quick swapping between dark and light background
+map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
