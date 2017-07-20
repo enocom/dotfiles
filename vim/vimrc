@@ -81,6 +81,7 @@ autocmd BufLeave * silent! wall    " save on lost focus
 set autowrite                      " write before ':make' commands
 set wildmenu                       " show possible completions on command line
 set backspace=indent,eol,start     " configure backspace behavior
+set textwidth=80                   " set width of all text
 
 set noswapfile                     " disable swap files
 set nowb                           " disable writing backup
