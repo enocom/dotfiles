@@ -62,11 +62,12 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=light           " assume a light background
+set background=dark            " assume a light background
 set ruler                      " show ruler in lower right
 set hlsearch                   " highlight all search results
 let loaded_matchparen=1        " turn off match paren highlighting
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
+let g:netrw_banner = 0         " remove banner in Explore mode. Toggle with I
 
 "------------------------------------------------------------------------------
 " Behavior
