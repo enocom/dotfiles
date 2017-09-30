@@ -62,12 +62,12 @@ autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=dark            " assume a light background
+set background=dark            " assume a dark background
 set ruler                      " show ruler in lower right
 set hlsearch                   " highlight all search results
-let loaded_matchparen=1        " turn off match paren highlighting
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
-let g:netrw_banner = 0         " remove banner in Explore mode. Toggle with I
+let loaded_matchparen=1        " turn off match paren highlighting
+let g:netrw_banner = 0         " remove banner in Explore mode (toggle with I and i)
 
 "------------------------------------------------------------------------------
 " Behavior
@@ -75,27 +75,22 @@ let g:netrw_banner = 0         " remove banner in Explore mode. Toggle with I
 autocmd BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 autocmd BufLeave * silent! wall    " save on lost focus
 
-set autowrite                      " write before ':make' commands
-set wildmenu                       " show possible completions on command line
-set backspace=indent,eol,start     " configure backspace behavior
-set textwidth=80                   " set width of all text
-
-set noswapfile                     " disable swap files
-set nowb                           " disable writing backup
-
-set smartcase                      " ignore case if lower, otherwise match case
-
-set splitbelow                     " split panes on the bottom
-set splitright                     " split panes to the right
-
-" indentation, spaces only, convert tabs
-set autoindent
-set smartindent
-set smarttab
-set shiftwidth=4
-set softtabstop=4
-set tabstop=4
-set expandtab
+set autowrite                  " write before ':make' commands
+set wildmenu                   " show possible completions on command line
+set backspace=indent,eol,start " configure backspace behavior
+set textwidth=80               " set width of all text
+set noswapfile                 " disable swap files
+set nowb                       " disable writing backup
+set smartcase                  " ignore case if lower, otherwise match case
+set splitbelow                 " split panes on the bottom
+set splitright                 " split panes to the right
+set autoindent                 " indent line based on previous line
+set smartindent                " add extra indent based on previous line
+set shiftwidth=4               " assume 4 spaces for a tab
+set expandtab                  " expand those tabs to spaces
+set tabstop=4                  " number of spaces a tab counts for in file
+set softtabstop=4              " number of spaces a tab counts for editing
+set smarttab                   " translate tabs into shiftwidth worth of spaces
 
 "------------------------------------------------------------------------------
 " LEADER SHORTCUTS
@@ -112,6 +107,3 @@ map <C-l> <C-w>l
 nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
-
-" allow for quick swapping between dark and light background
-map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
