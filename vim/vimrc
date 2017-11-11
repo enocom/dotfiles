@@ -56,6 +56,7 @@ function! s:build_go_files()
   endif
 endfunction
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
+autocmd FileType go nmap <leader>a :GoAlternate<CR>
 
 "------------------------------------------------------------------------------
 " APPEARANCE
@@ -107,3 +108,5 @@ map <C-l> <C-w>l
 nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
+
+map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
