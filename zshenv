@@ -16,7 +16,7 @@ compinit -i -C # Initialize the completion system. See the man page for
                # zshcompsys.
 
 # Enable ls colors
-export LSCOLORS="Gxfxcxdxbxegedabagacad"
+export LSCOLORS="exfxcxdxbxegedabagacad"
 export CLICOLOR=$LSCOLORS
 alias grep="grep --color=auto"
 
