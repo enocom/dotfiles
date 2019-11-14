@@ -171,6 +171,28 @@ font:
 draw_bold_text_with_bright_colors: true
 
 schemes:
+  basic: &basic
+    primary:
+      background: "0xFFFFFF"
+      foreground: "0x000000"
+    normal:
+      black:      "0x000000"
+      red:        "0x990000"
+      green:      "0x00A600"
+      yellow:     "0x999900"
+      blue:       "0x0000B2"
+      magenta:    "0xB200B2"
+      cyan:       "0x00A6B2"
+      white:      "0xBFBFBF"
+    bright:
+      black:      "0x666666"
+      red:        "0xE50000"
+      green:      "0x00D900"
+      yellow:     "0xE5E500"
+      blue:       "0x0000FF"
+      magenta:    "0xE500E5"
+      cyan:       "0x00E5E5"
+      white:      "0xE5E5E5"
   zenburn: &zenburn
       # Default colors
     primary:
@@ -274,7 +296,7 @@ schemes:
       cyan:    '0x93a1a1' # base1
       white:   '0xfdf6e3' # base3
 
-colors: *dark
+colors: *basic
 
 # Visual Bell
 #
