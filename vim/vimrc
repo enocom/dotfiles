@@ -22,10 +22,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle " Set the runtime path to include Vundle
 call vundle#begin()           " Initialize vundle
 Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
-Plugin 'ctrlpvim/ctrlp.vim'   " Quick file navigation
-Plugin 'tpope/vim-commentary' " Quickly comment lines out and in
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
-Plugin 'fatih/vim-go'         " Helpful plugin for Golang dev
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
@@ -33,37 +30,12 @@ call vundle#end()             " Complete vunde initialization
 filetype plugin indent on
 
 "------------------------------------------------------------------------------
-" CTRL-P CONFIG
-"------------------------------------------------------------------------------
-" ignore anything not tracked by git
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
-let g:ctrlp_show_hidden = 1        " include hidden files in results
-let g:ctrlp_working_path_mode = '' " stop setting git repo as root path
-
-"------------------------------------------------------------------------------
-" VIM-GO CONFIG
-"------------------------------------------------------------------------------
-let g:go_template_autocreate = 0   " disable template for new files
-let g:go_fmt_command = "goimports" " run goimports after gofmt
-
-" run :GoBuild or :GoTestCompile based on the go file
-function! s:build_go_files()
-  let l:file = expand('%')
-  if l:file =~# '^\f\+_test\.go$'
-    call go#test#Test(0, 1)
-  elseif l:file =~# '^\f\+\.go$'
-    call go#cmd#Build(0)
-  endif
-endfunction
-autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
-autocmd FileType go nmap <leader>a :GoAlternate<CR>
-
-"------------------------------------------------------------------------------
 " APPEARANCE
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=dark            " assume a dark background
+" set background=dark " assume a dark background
+set background=light " assume a light background
 set ruler                      " show ruler in lower right
 set hlsearch                   " highlight all search results
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
@@ -85,8 +57,8 @@ set nowb                       " disable writing backup
 set smartcase                  " ignore case if lower, otherwise match case
 set splitbelow                 " split panes on the bottom
 set splitright                 " split panes to the right
-set autoindent                 " indent line based on previous line
 set smartindent                " add extra indent based on previous line
+set autoindent                 " indent line based on previous line
 set shiftwidth=4               " assume 4 spaces for a tab
 set expandtab                  " expand those tabs to spaces
 set tabstop=4                  " number of spaces a tab counts for in file
