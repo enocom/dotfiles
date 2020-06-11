@@ -23,6 +23,8 @@ set rtp+=~/.vim/bundle/vundle " Set the runtime path to include Vundle
 call vundle#begin()           " Initialize vundle
 Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
+Plugin 'tpope/vim-commentary' " Make commenting lines in and out easy
+Plugin 'fatih/vim-go'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
@@ -34,10 +36,9 @@ filetype plugin indent on
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-" set background=dark " assume a dark background
-set background=light " assume a light background
+set background=dark " assume a dark background
+" set background=light " assume a light background
 set ruler                      " show ruler in lower right
-set hlsearch                   " highlight all search results
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 let loaded_matchparen=1        " turn off match paren highlighting
 let g:netrw_banner = 0         " remove banner in Explore mode (toggle with I and i)
