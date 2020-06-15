@@ -24,7 +24,9 @@ call vundle#begin()           " Initialize vundle
 Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
 Plugin 'tpope/vim-commentary' " Make commenting lines in and out easy
+Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'fatih/vim-go'
+Plugin 'rust-lang/rust.vim'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
