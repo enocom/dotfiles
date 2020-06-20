@@ -24,9 +24,9 @@ call vundle#begin()           " Initialize vundle
 Plugin 'gmarik/vundle'        " Let Vundle manage Vundle
 Plugin 'tpope/vim-fugitive'   " Help formatting commit messages
 Plugin 'tpope/vim-commentary' " Make commenting lines in and out easy
-Plugin 'ctrlpvim/ctrlp.vim'
-Plugin 'fatih/vim-go'
-Plugin 'rust-lang/rust.vim'
+Plugin 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
+Plugin 'fatih/vim-go'         " When writing Go
+Plugin 'rust-lang/rust.vim'   " When writing Rust
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
@@ -38,8 +38,7 @@ filetype plugin indent on
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
-set background=dark " assume a dark background
-" set background=light " assume a light background
+set background=dark            " assume a dark background
 set ruler                      " show ruler in lower right
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 let loaded_matchparen=1        " turn off match paren highlighting
@@ -84,4 +83,10 @@ nmap <silent> <leader>ev :edit $MYVIMRC<cr>
 " load vimrc into memory
 nmap <silent> <leader>ee :source $MYVIMRC<cr>
 
+" make it easy to switch background from dark to light
 map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" Plugin configuration
+let g:rustfmt_autosave = 1
+
+let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
