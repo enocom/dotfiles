@@ -87,6 +87,7 @@ nmap <silent> <leader>ee :source $MYVIMRC<cr>
 map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Plugin configuration
+" RustFmt on save
 let g:rustfmt_autosave = 1
-
+" Ctrl-p autocompletes what git tracks
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
