@@ -27,6 +27,7 @@ Plugin 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plugin 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plugin 'fatih/vim-go'         " When writing Go
 Plugin 'rust-lang/rust.vim'   " When writing Rust
+Plugin 'python-mode/python-mode'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
