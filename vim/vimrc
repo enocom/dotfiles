@@ -44,6 +44,7 @@ set ruler                      " show ruler in lower right
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 let loaded_matchparen=1        " turn off match paren highlighting
 let g:netrw_banner = 0         " remove banner in Explore mode (toggle with I and i)
+set number
 
 "------------------------------------------------------------------------------
 " Behavior
