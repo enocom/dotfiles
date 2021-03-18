@@ -68,6 +68,9 @@ set expandtab                  " expand those tabs to spaces
 set tabstop=4                  " number of spaces a tab counts for in file
 set softtabstop=4              " number of spaces a tab counts for editing
 set smarttab                   " translate tabs into shiftwidth worth of spaces
+set hls                        " Enable high ligh search
+" Turn off the highlighting by pressing space
+nnoremap <SPACE> :nohls<CR>
 
 "------------------------------------------------------------------------------
 " LEADER SHORTCUTS
