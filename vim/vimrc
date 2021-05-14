@@ -28,6 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plugin 'fatih/vim-go'         " When writing Go
 Plugin 'rust-lang/rust.vim'   " When writing Rust
 Plugin 'python-mode/python-mode'
+Plugin 'hashivim/vim-terraform'
 call vundle#end()             " Complete vunde initialization
 
 " enable filetype detection
@@ -40,6 +41,7 @@ filetype plugin indent on
 syntax on                      " enable syntax highlighting
 colorscheme default            " set color scheme
 set background=dark            " assume a dark background
+" set background=light            " assume a dark background
 set ruler                      " show ruler in lower right
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 let loaded_matchparen=1        " turn off match paren highlighting
@@ -98,6 +100,7 @@ let g:rustfmt_autosave = 1
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Run GoImports on save
 let g:go_imports_autosave = 1
+let g:go_def_mode = 'gopls'
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
