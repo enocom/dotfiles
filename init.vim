@@ -27,6 +27,7 @@ nnoremap <SPACE> :nohls<CR>
 autocmd BufWritePre * :%s/\s\+$//e " strip trailing whitespace on save
 autocmd BufLeave * silent! wall    " save on lost focus
 
+let loaded_matchparen = 1
 let g:netrw_banner = 0         " remove banner in Explore mode (toggle with I and i)
 let mapleader = "," " Use better map leader
 
