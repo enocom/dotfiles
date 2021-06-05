@@ -1,11 +1,7 @@
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'gmarik/vundle'        " Let Vundle manage Vundle
-Plug 'tpope/vim-fugitive'   " Help formatting commit messages
 Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
-Plug 'rust-lang/rust.vim'   " When writing Rust
-Plug 'python-mode/python-mode'
 call plug#end()
 
 set noincsearch
@@ -46,8 +42,6 @@ nmap <silent> <leader>ee :source $MYVIMRC<cr>
 map <leader>x :let &background = ( &background == "dark"? "light" : "dark" )<CR>
 
 " Plugin configuration
-" RustFmt on save
-let g:rustfmt_autosave = 1
 " Ctrl-p autocompletes what git tracks
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standard']
 " Run GoImports on save
