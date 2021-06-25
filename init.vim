@@ -2,8 +2,12 @@ call plug#begin(stdpath('data') . '/plugged')
 Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
+Plug 'python-mode/python-mode'
+Plug 'NLKNguyen/papercolor-theme'
 call plug#end()
 
+" set background=light
+colorscheme PaperColor
 set noincsearch
 set textwidth=80               " set width of all text
 set noswapfile                 " disable swap files
@@ -52,6 +56,10 @@ map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
 autocmd FileType go nmap <leader>r  <Plug>(go-run)
 let g:go_list_type = "quickfix"
+map <C-n> :cnext<CR>
+map <C-m> :cprevious<CR>
+nnoremap <leader>a :cclose<CR>
+
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
@@ -64,3 +72,11 @@ endfunction
 
 autocmd FileType go nmap <leader>b :<C-u>call <SID>build_go_files()<CR>
 autocmd FileType go nmap <leader>t :GoAlternate<CR>
+autocmd FileType go nmap <Leader>c <Plug>(go-coverage-toggle)
+autocmd FileType go nmap <Leader>i <Plug>(go-info)
+
+" Fix auto-indentation for YAML files
+augroup yaml_fix
+  autocmd!
+  autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
+augroup END
