@@ -1,9 +1,11 @@
 call plug#begin(stdpath('data') . '/plugged')
+Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
 Plug 'python-mode/python-mode'
 Plug 'NLKNguyen/papercolor-theme'
+Plug 'hashivim/vim-terraform'
 call plug#end()
 
 " set background=light
@@ -63,6 +65,7 @@ nnoremap <leader>a :cclose<CR>
 " run :GoBuild or :GoTestCompile based on the go file
 function! s:build_go_files()
   let l:file = expand('%')
+  write
   if l:file =~# '^\f\+_test\.go$'
     call go#test#Test(0, 1)
   elseif l:file =~# '^\f\+\.go$'
