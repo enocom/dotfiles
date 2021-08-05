@@ -4,8 +4,11 @@ Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
 Plug 'python-mode/python-mode'
+Plug 'ambv/black'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'hashivim/vim-terraform'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
 call plug#end()
 
 " set background=light
