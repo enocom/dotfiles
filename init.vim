@@ -1,17 +1,16 @@
 call plug#begin(stdpath('data') . '/plugged')
-Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb' " GitHub support for fugitive
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
 Plug 'python-mode/python-mode'
 Plug 'ambv/black'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'hashivim/vim-terraform'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-rhubarb'
 call plug#end()
 
-" set background=light
+set background=light
 colorscheme PaperColor
 set noincsearch
 set textwidth=80               " set width of all text
