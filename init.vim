@@ -4,8 +4,6 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb' " GitHub support for fugitive
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
 Plug 'fatih/vim-go'         " When writing Go
-Plug 'python-mode/python-mode'
-Plug 'ambv/black'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'hashivim/vim-terraform'
 call plug#end()
@@ -55,6 +53,9 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 " Run GoImports on save
 let g:go_imports_autosave = 1
 
+let g:go_def_mode='gopls'
+let g:go_info_mode='gopls'
+
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
 nnoremap <leader>a :cclose<CR>
@@ -84,4 +85,10 @@ autocmd FileType go nmap <Leader>i <Plug>(go-info)
 augroup yaml_fix
   autocmd!
   autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab indentkeys-=0# indentkeys-=<:>
+augroup END
+
+" https://vi.stackexchange.com/questions/2843/how-to-automatically-set-wrapping-for-quickfix-window
+augroup quickfix
+    autocmd!
+    autocmd FileType qf setlocal wrap
 augroup END
