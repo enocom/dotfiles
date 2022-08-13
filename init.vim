@@ -5,6 +5,8 @@ Plug 'tpope/vim-rhubarb'          " GitHub support for fugitive
 Plug 'ctrlpvim/ctrlp.vim'         " Fuzzy finder
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'neovim/nvim-lspconfig'
+Plug 'ray-x/go.nvim'
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
 " set background=light
@@ -107,24 +109,15 @@ require("lspconfig")['gopls'].setup {
     },
   },
 }
-
--- order imports on save
-function go_org_imports(wait_ms)
-    local params = vim.lsp.util.make_range_params()
-    params.context = {only = {"source.organizeImports"}}
-    local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params, wait_ms)
-    for cid, res in pairs(result or {}) do
-      for _, r in pairs(res.result or {}) do
-        if r.edit then
-          local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
-          vim.lsp.util.apply_workspace_edit(r.edit, enc)
-        end
-      end
-    end
-end
 EOF
 
-autocmd BufWritePre *.go lua go_org_imports()
+lua <<EOF
+require('go').setup()
+
+-- Run gofmt + goimport on save
+vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
+
+EOF
 
 map <C-n> :cnext<CR>
 map <C-m> :cprevious<CR>
