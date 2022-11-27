@@ -3,11 +3,17 @@ require('packer').startup(function(use)
   use 'tpope/vim-commentary'       -- make commmenting lines in and out easy
   use 'tpope/vim-fugitive'         -- Git integration
   use 'tpope/vim-rhubarb'          -- GitHub support for fugitive
-  use 'ctrlpvim/ctrlp.vim'         -- Fuzzy finder
+  use 'ctrlpvim/ctrlp.vim'
   use 'NLKNguyen/papercolor-theme'
   use 'neovim/nvim-lspconfig'
   use 'ray-x/go.nvim'
   use 'python-mode/python-mode'
+
+  use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
+
+  use 'simrat39/rust-tools.nvim'
+
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
   -- Automatically set up your configuration after cloning packer.nvim
@@ -52,7 +58,35 @@ require("lspconfig")['gopls'].setup {
 }
 
 require('go').setup()
+require("mason").setup()
 
 -- Run gofmt + goimport on save
 vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
 
+local rt = require("rust-tools")
+
+rt.setup({
+  server = {
+    on_attach = function(_, bufnr)
+      -- Hover actions
+      vim.keymap.set("n", "<C-space>", rt.hover_actions.hover_actions, { buffer = bufnr })
+      -- Code action groups
+      vim.keymap.set("n", "<Leader>a", rt.code_action_group.code_action_group, { buffer = bufnr })
+    end,
+  },
+})
+
+require('nvim-treesitter.configs').setup {
+  ensure_installed = { "rust", "toml" },
+  auto_install = true,
+  highlight = {
+    enable = true,
+    additional_vim_regex_highlighting=false,
+  },
+  ident = { enable = true },
+  rainbow = {
+    enable = true,
+    extended_mode = true,
+    max_file_lines = nil,
+  }
+}
