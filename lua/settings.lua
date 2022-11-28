@@ -18,11 +18,17 @@ bo.shiftwidth   = 4
 bo.tabstop      = 4
 bo.softtabstop  = 4
 
-vim.cmd("colorscheme PaperColor")
 
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*" },
   command = [[%s/\s\+$//e]],
 })
+-- Run gofmt + goimport on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.go" },
+  command = [[silent! lua require("go.format").goimport() ]],
+})
 
 vim.g.netrw_banner = 0
+
+vim.cmd("colorscheme PaperColor")

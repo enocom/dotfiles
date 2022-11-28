@@ -76,12 +76,7 @@ require("lspconfig")['gopls'].setup {
 require('go').setup()
 require("mason").setup()
 
--- Run gofmt + goimport on save
-vim.api.nvim_exec([[ autocmd BufWritePre *.go :silent! lua require('go.format').goimport() ]], false)
-
-local rt = require("rust-tools")
-
-rt.setup({
+require("rust-tools").setup({
   server = {
     on_attach = function(_, bufnr)
       -- Hover actions
