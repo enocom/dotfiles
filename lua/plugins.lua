@@ -37,7 +37,9 @@ local on_attach = function(client, bufnr)
   vim.keymap.set('i', '<C-k>', vim.lsp.buf.signature_help, bufopts)
 end
 
-require("lspconfig")['gopls'].setup {
+local nvim_lsp = require('lspconfig')
+
+nvim_lsp.gopls.setup {
   on_attach = on_attach,
   cmd = {"gopls", "serve"},
   filetypes = {"go", "gomod"},
@@ -54,5 +56,28 @@ require("lspconfig")['gopls'].setup {
     },
   },
 }
+
+
+nvim_lsp.rust_analyzer.setup({
+    on_attach=on_attach,
+    settings = {
+        ["rust-analyzer"] = {
+            imports = {
+                granularity = {
+                    group = "module",
+                },
+                prefix = "self",
+            },
+            cargo = {
+                buildScripts = {
+                    enable = true,
+                },
+            },
+            procMacro = {
+                enable = true
+            },
+        }
+    }
+})
 
 require('go').setup()
