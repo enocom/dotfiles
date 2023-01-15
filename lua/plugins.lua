@@ -49,7 +49,6 @@ nvim_lsp.gopls.setup {
       analyses = {
         unusedparams = true,
         fieldalignment = true,
-        shadow = true,
         unusedvariable = true,
       },
       staticcheck = true,
