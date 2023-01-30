@@ -9,6 +9,7 @@ o.termguicolors = true
 o.smartcase     = true
 o.splitbelow    = true
 o.splitright    = true
+o.clipboard     = 'unnamedplus'
 
 wo.number       = true
 
