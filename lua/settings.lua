@@ -30,6 +30,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   command = [[silent! lua require("go.format").goimport() ]],
 })
 
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.rs" },
+  command = [[silent! lua vim.lsp.buf.format() ]],
+})
+
 vim.g.netrw_banner = 0
 
 vim.cmd("colorscheme PaperColor")

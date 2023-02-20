@@ -8,6 +8,7 @@ require('packer').startup(function(use)
   use 'neovim/nvim-lspconfig'
   use 'ray-x/go.nvim'
   use 'python-mode/python-mode'
+  use 'rust-lang/rust.vim'
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
