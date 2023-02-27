@@ -19,6 +19,11 @@ require('packer').startup(function(use)
   end
 end)
 
+vim.cmd [[
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
+]]
+
+
 
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
