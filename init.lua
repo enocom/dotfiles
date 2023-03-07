@@ -122,7 +122,7 @@ vim.g.netrw_banner = 0
 vim.cmd("colorscheme PaperColor")
 
 vim.cmd [[
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --ex>
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 ]]
 
 
