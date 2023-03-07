@@ -23,7 +23,6 @@ require('packer').startup(function(use)
   end
 end)
 
-
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)
@@ -121,6 +120,11 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
 vim.g.netrw_banner = 0
 
 vim.cmd("colorscheme PaperColor")
+
+vim.cmd [[
+let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --ex>
+]]
+
 
 local map = vim.api.nvim_set_keymap
 
