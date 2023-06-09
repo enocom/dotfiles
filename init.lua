@@ -116,20 +116,19 @@ vim.api.nvim_create_autocmd({ "BufWritePre" }, {
   pattern = { "*.go" },
   command = [[silent! lua require("go.format").goimport() ]],
 })
-
-vim.g.netrw_banner = 0
+-- Run rust format on save
+vim.api.nvim_create_autocmd({ "BufWritePre" }, {
+  pattern = { "*.rs" },
+  command = [[silent! lua vim.lsp.buf.format() ]],
+})
 
 vim.cmd("colorscheme PaperColor")
-
-vim.cmd [[
-let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-]]
-
-
-local map = vim.api.nvim_set_keymap
+vim.cmd([[ set mouse= ]])
 
 vim.g.mapleader = ","
+vim.g.netrw_banner = 0
 
+local map = vim.api.nvim_set_keymap
 options = { noremap = true }
 map('n', '<C-h>', '<C-w>h', options)
 map('n', '<C-j>', '<C-w>j', options)
