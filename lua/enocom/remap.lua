@@ -8,9 +8,7 @@ vim.keymap.set('n', '<leader>ee', ':source $MYVIMRC<CR>')
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
 -- Manually format buffer, don't do it automatically
-vim.keymap.set("n", "<leader>f", function()
-    vim.lsp.buf.format()
-end)
+vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 -- make it easy to yank to vim or system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y")
