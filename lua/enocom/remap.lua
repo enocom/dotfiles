@@ -4,12 +4,6 @@ vim.g.mapleader = " "
 vim.keymap.set('n', '<leader>ev', ':edit $MYVIMRC<CR>')
 vim.keymap.set('n', '<leader>ee', ':source $MYVIMRC<CR>')
 
--- Make it easy to switch splits
-vim.keymap.set('n', '<C-h>', '<C-w>h')
-vim.keymap.set('n', '<C-j>', '<C-w>j')
-vim.keymap.set('n', '<C-k>', '<C-w>k')
-vim.keymap.set('n', '<C-l>', '<C-w>l')
-
 -- Keymap to get to Ex mode
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 
