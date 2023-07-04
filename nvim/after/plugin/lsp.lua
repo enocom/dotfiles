@@ -27,7 +27,3 @@ lsp.configure('lua_ls', {
 })
 
 lsp.setup()
-
-vim.diagnostic.config({
-    virtual_text = true,
-})
