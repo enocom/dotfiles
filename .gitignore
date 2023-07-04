@@ -2,3 +2,5 @@
 vim/.netrwhist
 vim/bundle/
 *~
+.netrwhist
+/plugin
