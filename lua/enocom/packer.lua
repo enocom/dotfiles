@@ -15,6 +15,7 @@ return require('packer').startup(function(use)
             vim.cmd([[colorscheme PaperColor]])
         end
     })
+    use('folke/tokyonight.nvim')
 
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
     use('tpope/vim-commentary')
