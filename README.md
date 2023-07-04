@@ -1,7 +1,7 @@
 # dotfiles
 
 This is a collection of useful odds and ends. I try to keep the files
-here as minimal as possible. My nvim config lives elsewhere.
+here as minimal as possible.
 
 ## Current tools:
 
