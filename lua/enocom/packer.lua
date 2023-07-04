@@ -9,12 +9,7 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     })
 
-    use({
-        'NLKNguyen/papercolor-theme',
-        config = function()
-            vim.cmd([[colorscheme PaperColor]])
-        end
-    })
+    use('NLKNguyen/papercolor-theme')
     use('folke/tokyonight.nvim')
 
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
