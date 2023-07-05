@@ -3,4 +3,4 @@ vim/.netrwhist
 vim/bundle/
 *~
 .netrwhist
-/plugin
+/nvim/plugin
