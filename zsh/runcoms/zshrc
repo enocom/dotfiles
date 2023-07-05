@@ -1,0 +1,32 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# TODO: put init.zsh in a better place.
+if [[ -s "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/init.zsh"
+fi
+
+function hardmain() {
+    git fetch --prune && git reset --hard origin/main
+}
+
+function dbr {
+    git for-each-ref --format '%(refname:short)' refs/heads | grep -v "master\|main" | xargs git branch -D
+}
+
+export PATH=$HOME/bin:$PATH
+
+alias ll="ls -laH"
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/enocom/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/enocom/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/enocom/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/enocom/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+export EDITOR=nvim
+export JAVA_HOME=$(/usr/libexec/java_home)
