@@ -6,7 +6,7 @@ here as minimal as possible.
 ## Current tools:
 
 - [Alacritty][alacritty]
-- [Zsh][zsh] configured with [Prezto][prezto]
+- [Zsh][zsh] configured with a simplified version of [Prezto][prezto]
 - [Neovim][neovim] with Lua-based configuration
 - [tmux][]
 
@@ -16,3 +16,18 @@ here as minimal as possible.
 [tmux]: https://github.com/tmux/tmux/wiki
 [zsh]: https://www.zsh.org
 
+## Installation
+
+``` shell
+# NeoVim installation
+ln -s ~/workspace/dotiles/nvim ~/.config/nvim
+
+# Zsh setup
+ln -s ~/workspace/dotfiles/zsh/zpreztorc ~/.zpreztorc
+ln -s ~/workspace/dotfiles/zsh/zprofile ~/.zprofile
+ln -s ~/workspace/dotfiles/zsh/zshenv ~/.zshenv
+ln -s ~/workspace/dotfiles/zsh/zshrc ~/.zshrc
+
+# tmux setup
+ln -s ~/workspace/dotfiles/tmux.conf ~/.tmux.conf
+```
