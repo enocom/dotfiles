@@ -23,10 +23,10 @@ here as minimal as possible.
 ln -s ~/workspace/dotiles/nvim ~/.config/nvim
 
 # Zsh setup
-ln -s ~/workspace/dotfiles/zsh/zpreztorc ~/.zpreztorc
-ln -s ~/workspace/dotfiles/zsh/zprofile ~/.zprofile
-ln -s ~/workspace/dotfiles/zsh/zshenv ~/.zshenv
-ln -s ~/workspace/dotfiles/zsh/zshrc ~/.zshrc
+ln -s ~/workspace/dotfiles/zsh/runcoms/zpreztorc ~/.zpreztorc
+ln -s ~/workspace/dotfiles/zsh/runcoms/zprofile ~/.zprofile
+ln -s ~/workspace/dotfiles/zsh/runcoms/zshenv ~/.zshenv
+ln -s ~/workspace/dotfiles/zsh/runcoms/zshrc ~/.zshrc
 
 # tmux setup
 ln -s ~/workspace/dotfiles/tmux.conf ~/.tmux.conf
