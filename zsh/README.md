@@ -2,14 +2,6 @@
 
 This is my simplifcation of [Prezto][prezto].
 
-## Installation
-
-```
-# Set the ZDOTDIR to the zsh directory wherever it is on disk
-sudo touch /etc/zshenv
-sudo echo 'export ZDOTDIR="${HOME}/workspace/dotfiles/zsh"' >> /etc/zshenv
-```
-
 [prezto]: https://github.com/sorin-ionescu/prezto
 
 ## Configuration Files
