@@ -52,7 +52,7 @@ else
 fi
 
 alias l='ls -1A'         # Lists in one column, hidden files.
-alias ll='ls -lh'        # Lists human readable sizes.
+alias ll='ls -lAh'        # Lists human readable sizes.
 
 # Grep
 if zstyle -t ':prezto:module:utility:grep' color; then
