@@ -1,6 +1,6 @@
 .DS_Store
-vim/.netrwhist
-vim/bundle/
-*~
+
 .netrwhist
 /nvim/plugin
+
+/zsh/private.zsh
