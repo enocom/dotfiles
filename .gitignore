@@ -3,4 +3,5 @@
 .netrwhist
 /nvim/plugin
 
+/zsh/.zsh_history
 /zsh/private.zsh

@@ -5,15 +5,13 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-# TODO: put init.zsh in a better place.
-if [[ -s "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/init.zsh"
+if [[ -s "${ZDOTDIR}/init.zsh" ]]; then
+  source "${ZDOTDIR}/init.zsh"
 fi
 
 # Source private settings that aren't tracked and are per-machine
-# TODO: put this in a better place.
-if [[ -s "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/private.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/workspace/dotfiles/zsh/private.zsh"
+if [[ -s "${ZDOTDIR}/private.zsh" ]]; then
+  source "${ZDOTDIR}/private.zsh"
 fi
 
 function hardmain() {

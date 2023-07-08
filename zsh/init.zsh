@@ -118,10 +118,22 @@ function pmodload {
 # the current directory of the shell rather than the prezto dir.
 ZPREZTODIR=${0:h}
 
-# Source the Prezto configuration file.
-if [[ -s "${ZDOTDIR:-$HOME}/.zpreztorc" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zpreztorc"
-fi
+# Color output (auto set to 'no' on dumb terminals).
+zstyle ':prezto:*:*' color 'yes'
+
+# Set the Prezto modules to load (browse modules).
+# The order matters.
+zstyle ':prezto:load' pmodule \
+  'editor' \
+  'history' \
+  'utility' \
+  'spectrum' \
+  'completion' \
+  'git' \
+  'prompt'
+
+# Set the key mapping style to 'emacs' or 'vi'.
+zstyle ':prezto:module:editor' key-bindings 'emacs'
 
 # Load Zsh modules.
 zstyle -a ':prezto:load' zmodule 'zmodules'
