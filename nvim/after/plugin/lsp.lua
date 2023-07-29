@@ -1,6 +1,11 @@
 local lsp = require("lsp-zero").preset({
     name = "recommended",
-    float_border = 'none',
+    --[[
+    String. Shape of borders in floating windows. It can be one of the
+    following: `'none'`, `'single'`, `'double'`, `'rounded'`, `'solid'`
+    or `'shadow'`.
+    --]]
+    float_border = 'single',
 })
 
 lsp.on_attach(function(_, bufnr)
