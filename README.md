@@ -25,7 +25,7 @@ ln -s ~/workspace/dotiles/nvim ~/.config/nvim
 # Zsh setup
 # Set the ZDOTDIR to the zsh directory wherever it is on disk
 sudo touch /etc/zshenv
-sudo echo 'export ZDOTDIR="${HOME}/workspace/dotfiles/zsh"' >> /etc/zshenv
+sudo echo 'export ZDOTDIR="${HOME}/workspace/dotfiles/zsh"' >> /etc/zsh/zshenv
 
 # tmux setup
 ln -s ~/workspace/dotfiles/tmux.conf ~/.tmux.conf
