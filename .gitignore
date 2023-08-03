@@ -4,5 +4,6 @@
 /nvim/plugin
 
 /zsh/.zhistory
+/zsh/.zsh_history
 /zsh/private.zsh
 /zsh/.zcompdumps/
