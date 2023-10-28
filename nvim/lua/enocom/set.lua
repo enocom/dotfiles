@@ -45,3 +45,9 @@ vim.api.nvim_create_autocmd('BufWritePre', {
         })
     end
 })
+
+-- takac/vim-hardtime
+-- helps break bad habits
+vim.g.hardtime_default_on = 1
+
+vim.g.netrw_banner        = 0
