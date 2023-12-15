@@ -12,18 +12,6 @@ lsp.on_attach(function(_, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
-lsp.format_on_save({
-  format_opts = {
-    async = false,
-    timeout_ms = 10000,
-  },
-  servers = {
-    ['gopls'] = {'go'},
-    ['tsserver'] = {'javascript', 'typescript'},
-    ['rust_analyzer'] = {'rust'},
-  }
-})
-
 lsp.ensure_installed({
     'gopls',
     'tsserver',
