@@ -81,6 +81,7 @@ vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 vim.g.netrw_banner        = 0
 
+vim.opt.mouse          = ""
 vim.opt.guicursor      = ""
 vim.opt.number         = true
 vim.opt.relativenumber = true
