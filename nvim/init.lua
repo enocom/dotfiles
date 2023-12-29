@@ -24,7 +24,7 @@ require('packer').startup(function(use)
 
     use({
         'nvim-telescope/telescope.nvim',
-        tag = '0.1.0',
+        tag = '0.1.5',
         requires = { { 'nvim-lua/plenary.nvim' } }
     })
 
@@ -79,7 +79,7 @@ vim.keymap.set("n", "<leader>Y", "\"+Y")
 -- format manually because something is broken with auto
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
-vim.g.netrw_banner        = 0
+vim.g.netrw_banner     = 0
 
 vim.opt.mouse          = ""
 vim.opt.guicursor      = ""
@@ -133,10 +133,10 @@ end)
 
 lsp.ensure_installed({
     'gopls',
-    'tsserver',
-    'eslint',
     'lua_ls',
     'rust_analyzer',
+    'terraformls',
+    'pylsp',
 })
 
 lsp.configure('lua_ls', {
