@@ -25,3 +25,6 @@ function dbr {
         grep -v "master\|main" |
         xargs git branch -D
 }
+
+# Pip reuqires virtualenv and fails otherwise
+export PIP_REQUIRE_VIRTUALENV=true
