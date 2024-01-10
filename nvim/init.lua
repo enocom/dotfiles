@@ -29,6 +29,7 @@ require('packer').startup(function(use)
     })
 
     use('folke/tokyonight.nvim')
+    use('overcache/NeoSolarized')
     use('tpope/vim-commentary')
 
     use({ 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' })
