@@ -77,6 +77,15 @@ vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>Y", "\"+Y")
 
+-- make it easy to toggle light and dark
+vim.keymap.set("n", "<leader>x", function()
+    if vim.o.background == "dark" then
+        vim.o.background = "light"
+    else
+        vim.o.background = "dark"
+    end
+end)
+
 -- format manually because something is broken with auto
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -162,7 +171,7 @@ vim.keymap.set('n', '<C-p>', function()
     builtin.git_files({ previewer = false })
 end, {})
 
-vim.cmd.colorscheme('tokyonight-night')
+vim.cmd.colorscheme('NeoSolarized')
 
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all"
