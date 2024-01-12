@@ -171,7 +171,7 @@ vim.keymap.set('n', '<C-p>', function()
     builtin.git_files({ previewer = false })
 end, {})
 
-vim.cmd.colorscheme('NeoSolarized')
+vim.cmd.colorscheme('tokyonight')
 
 require('nvim-treesitter.configs').setup {
     -- A list of parser names, or "all"
