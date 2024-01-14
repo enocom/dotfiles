@@ -22,24 +22,24 @@ call plug#begin()
 Plug 'tpope/vim-fugitive'   " Help formatting commit messages
 Plug 'tpope/vim-commentary' " Make commenting lines in and out easy
 Plug 'ctrlpvim/ctrlp.vim'   " Fuzzy finder
+Plug 'ghifarit53/tokyonight-vim'
 call plug#end()
 
-" enable filetype detection
-" and indent detection (based on filetype)
-filetype plugin indent on
+set termguicolors
 
 "------------------------------------------------------------------------------
 " APPEARANCE
 "------------------------------------------------------------------------------
 syntax on                      " enable syntax highlighting
-colorscheme default            " set color scheme
-set background=dark            " assume a dark background
-" set background=light            " assume a dark background
 set ruler                      " show ruler in lower right
 set list listchars=tab:\ \ ,trail:· " display tabs and trailing spaces
 let loaded_matchparen=1        " turn off match paren highlighting
 let g:netrw_banner = 0         " remove banner in Explore mode (toggle with I and i)
 set number
+set relativenumber
+set background=dark            " assume a dark background
+colorscheme tokyonight         " set color scheme
+let g:tokyonight_style = 'storm' " available: night, storm
 
 "------------------------------------------------------------------------------
 " Behavior
