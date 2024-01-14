@@ -18,18 +18,22 @@ A minimal vim-config with annotations at just about 100 lines.
 
 ## Installation
 
-If you have a current `.vimrc` or `.vim` directory, move them out of the way first:
+Install vim-plug:
 
-``` bash
-mv ~/.vimrc ~/.vimrc.old
-mv ~/.vim ~/.vim.old
+``` shell
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
-Then, simply change to the repo's directory and run the install script:
+Then:
+
+``` shell
+ln -s $PWD/vimrc ~/.vimrc
+```
+
+And lastly, inside Vim:
 
 ```
-cd ~/vim-config # or wherever you cloned it
-./install.sh
+:PlugInstall
 ```
 
-The install script will pull down a small number of plugins. Once the script finishes, vim is ready to go.
