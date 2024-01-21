@@ -183,18 +183,7 @@ vim.cmd.colorscheme('tokyonight')
 
 require('nvim-treesitter.configs').setup {
     auto_install = false,
-
-    ensure_installed = {
-        "go",
-        "lua",
-        "rust",
-    },
-
-    -- Install parsers synchronously (only applied to `ensure_installed`)
-    sync_install = false,
-
     highlight = {
         enable = true,
-        additional_vim_regex_highlighting = false,
     },
 }
