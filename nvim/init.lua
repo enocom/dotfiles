@@ -149,13 +149,7 @@ lsp.on_attach(function(_, bufnr)
     lsp.default_keymaps({ buffer = bufnr })
 end)
 
-lsp.ensure_installed({
-    'gopls',
-    'lua_ls',
-    'rust_analyzer',
-    'terraformls',
-    'pylsp',
-})
+lsp.ensure_installed({'lua_ls'})
 
 lsp.configure('lua_ls', {
     settings = {
