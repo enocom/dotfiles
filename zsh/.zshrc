@@ -5,8 +5,6 @@
 #   Sorin Ionescu <sorin.ionescu@gmail.com>
 #
 
-export PATH=~/.local/bin:$PATH
-
 if [[ -s "${ZDOTDIR}/init.zsh" ]]; then
   source "${ZDOTDIR}/init.zsh"
 fi
