@@ -31,6 +31,9 @@ require('packer').startup(function(use)
     use('folke/tokyonight.nvim')
     use('overcache/NeoSolarized')
     use('tpope/vim-commentary')
+    use('ziglang/zig.vim')
+    use('mrcjkb/rustaceanvim')
+    use('airblade/vim-gitgutter')
 
     use({
         'nvim-treesitter/nvim-treesitter',
@@ -182,5 +185,3 @@ require('nvim-treesitter.configs').setup {
     },
 }
 
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
