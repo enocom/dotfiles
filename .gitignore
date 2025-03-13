@@ -2,9 +2,12 @@
 
 .netrwhist
 /nvim/plugin
+/nvim/lazy-lock.json
 
 /zsh/.zhistory
 /zsh/.zsh_history
 /zsh/.zsh_sessions
 /zsh/private.zsh
 /zsh/.zcompdumps/
+/zsh/.zcompcache/
+
