@@ -31,8 +31,6 @@ require('lazy').setup({
         },
         { 'tpope/vim-commentary' },
         { 'ziglang/zig.vim' },
-        { 'mrcjkb/rustaceanvim' },
-        { 'airblade/vim-gitgutter' },
         {
             'nvim-treesitter/nvim-treesitter',
             run = function()
