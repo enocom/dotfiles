@@ -25,40 +25,51 @@ require('lazy').setup({
             lazy = false,
         },
         {
+            'nvim-treesitter/nvim-treesitter',
+            lazy = false,
+            branch = 'main',
+            build = ':TSUpdate'
+        },
+        {
             'nvim-telescope/telescope.nvim',
-            tag = '0.1.5',
+            tag = '0.1.8',
             requires = { { 'nvim-lua/plenary.nvim' } }
         },
-        { 'tpope/vim-commentary' },
-        { 'ziglang/zig.vim' },
         {
-            'nvim-treesitter/nvim-treesitter',
-            run = function()
-                local ts_update = require('nvim-treesitter.install').update({
-                    with_sync = true
-                })
-                ts_update()
-            end,
+            'tpope/vim-commentary',
         },
-        { 'neovim/nvim-lspconfig' },
         {
-            'williamboman/mason.nvim',
-            build = function()
-                pcall(vim.cmd, 'MasonUpdate')
-            end,
+            'mason-org/mason.nvim',
+            opts = {}
         },
-        { 'williamboman/mason-lspconfig.nvim' },
-        -- Autocompletion
+        {
+            'ziglang/zig.vim',
+        },
+        {
+            'mrcjkb/rustaceanvim',
+            version = '^6', -- Recommended
+            lazy = false,   -- This plugin is already lazy
+        },
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'L3MON4D3/LuaSnip' },
         { 'hrsh7th/cmp-nvim-lua' }, -- source for neovim Lua API.
-        {
-            'VonHeikemen/lsp-zero.nvim',
-            branch = 'v2.x',
-        }
     },
 })
+
+vim.keymap.set("n", "<Leader>ds", vim.diagnostic.open_float, {
+    desc = "Show diagnostic"
+})
+
+-- vim.diagnostic.config({
+--     virtual_text = true,
+-- })
+
+local virtual_text_enabled = true
+vim.keymap.set("n", "<leader>dv", function()
+    virtual_text_enabled = not virtual_text_enabled
+    vim.diagnostic.config({ virtual_text = virtual_text_enabled })
+end, { desc = "Toggle diagnostics virtual text" })
 
 vim.cmd.colorscheme('tokyonight')
 
@@ -108,6 +119,11 @@ vim.opt.signcolumn     = "yes"
 vim.opt.updatetime     = 50
 vim.opt.colorcolumn    = "80"
 
+vim.opt.relativenumber = true
+
+vim.o.winborder        = "rounded"
+
+-- Strip trailing whitespace on save.
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     pattern = { "*" },
     command = [[%s/\s\+$//e]],
@@ -125,28 +141,24 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
 })
 
-local lsp = require("lsp-zero").preset({
-    name = "recommended",
-    float_border = 'single',
-})
-
-lsp.on_attach(function(_, bufnr)
-    lsp.default_keymaps({ buffer = bufnr })
-end)
-
-lsp.ensure_installed({ 'lua_ls' })
-
-lsp.configure('lua_ls', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
-
-lsp.setup()
+local bufnr = vim.api.nvim_get_current_buf()
+vim.keymap.set(
+    "n",
+    "<leader>a",
+    function()
+        vim.cmd.RustLsp('codeAction') -- supports rust-analyzer's grouping
+        -- or vim.lsp.buf.codeAction() if you don't want grouping.
+    end,
+    { silent = true, buffer = bufnr }
+)
+vim.keymap.set(
+    "n",
+    "K", -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
+    function()
+        vim.cmd.RustLsp({ 'hover', 'actions' })
+    end,
+    { silent = true, buffer = bufnr }
+)
 
 local builtin = require('telescope.builtin')
 
@@ -158,16 +170,35 @@ vim.keymap.set('n', '<C-p>', function()
     builtin.git_files({ previewer = false })
 end, {})
 
-require('nvim-treesitter.configs').setup {
-    ensure_installed = {
-        "c",
-        "go",
-        "lua",
-        "rust",
-        "zig",
+vim.lsp.config('luals', {
+    cmd = { 'lua-language-server' },
+    filetypes = { 'lua' },
+    -- Specific settings to send to the server. The schema is server-defined.
+    -- Example: https://raw.githubusercontent.com/LuaLS/vscode-lua/master/setting/schema.json
+    settings = {
+        Lua = {
+            diagnostics = {
+                globals = { 'vim' }
+            },
+            runtime = {
+                version = 'LuaJIT',
+            }
+        }
+    }
+})
+vim.lsp.enable('luals')
+
+vim.lsp.config('gopls', {
+    settings = {
+        gopls = {},
     },
-    auto_install = false,
-    highlight = {
-        enable = true,
-    },
-}
+})
+vim.lsp.enable('gopls')
+
+require('nvim-treesitter').install({
+    "c",
+    "go",
+    "lua",
+    "rust",
+    "zig",
+})
