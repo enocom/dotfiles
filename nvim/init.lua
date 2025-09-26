@@ -45,17 +45,14 @@ require('lazy').setup({
         {
             'ziglang/zig.vim',
         },
-        {
-            'mrcjkb/rustaceanvim',
-            version = '^6', -- Recommended
-            lazy = false,   -- This plugin is already lazy
-        },
         { 'hrsh7th/nvim-cmp' },
         { 'hrsh7th/cmp-nvim-lsp' },
         { 'L3MON4D3/LuaSnip' },
         { 'hrsh7th/cmp-nvim-lua' }, -- source for neovim Lua API.
     },
 })
+
+vim.o.winborder = 'rounded'
 
 vim.keymap.set("n", "<Leader>ds", vim.diagnostic.open_float, {
     desc = "Show diagnostic"
@@ -189,11 +186,16 @@ vim.lsp.config('luals', {
 vim.lsp.enable('luals')
 
 vim.lsp.config('gopls', {
-    settings = {
-        gopls = {},
-    },
+    cmd = { 'gopls' },
+    filetypes = { 'go', 'gomod', 'gowork' },
 })
 vim.lsp.enable('gopls')
+
+vim.lsp.config('rust-analyzer', {
+    cmd = { 'rust-analyzer' },
+    filetypes = { 'rust' },
+})
+vim.lsp.enable('rust-analyzer')
 
 require('nvim-treesitter').install({
     "c",
@@ -201,4 +203,13 @@ require('nvim-treesitter').install({
     "lua",
     "rust",
     "zig",
+})
+
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'go' },
+  callback = function() vim.treesitter.start() end,
+})
+vim.api.nvim_create_autocmd('FileType', {
+  pattern = { 'rust' },
+  callback = function() vim.treesitter.start() end,
 })
