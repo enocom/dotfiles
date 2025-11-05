@@ -138,31 +138,10 @@ vim.api.nvim_create_autocmd('BufWritePre', {
     end
 })
 
-local bufnr = vim.api.nvim_get_current_buf()
-vim.keymap.set(
-    "n",
-    "<leader>a",
-    function()
-        vim.cmd.RustLsp('codeAction') -- supports rust-analyzer's grouping
-        -- or vim.lsp.buf.codeAction() if you don't want grouping.
-    end,
-    { silent = true, buffer = bufnr }
-)
-vim.keymap.set(
-    "n",
-    "K", -- Override Neovim's built-in hover keymap with rustaceanvim's hover actions
-    function()
-        vim.cmd.RustLsp({ 'hover', 'actions' })
-    end,
-    { silent = true, buffer = bufnr }
-)
-
 local builtin = require('telescope.builtin')
-
 vim.keymap.set('n', '<leader>pf', function()
     builtin.find_files({ previewer = false })
 end, {})
-
 vim.keymap.set('n', '<C-p>', function()
     builtin.git_files({ previewer = false })
 end, {})
@@ -197,6 +176,13 @@ vim.lsp.config('rust-analyzer', {
 })
 vim.lsp.enable('rust-analyzer')
 
+vim.lsp.config('pyright', {
+    cmd = { 'pyright-langserver', '--stdio' },
+    filetypes = { 'python' },
+    single_file_support = true,
+})
+vim.lsp.enable('pyright')
+
 require('nvim-treesitter').install({
     "c",
     "go",
@@ -206,10 +192,14 @@ require('nvim-treesitter').install({
 })
 
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'go' },
-  callback = function() vim.treesitter.start() end,
+    pattern = { 'go' },
+    callback = function() vim.treesitter.start() end,
 })
 vim.api.nvim_create_autocmd('FileType', {
-  pattern = { 'rust' },
-  callback = function() vim.treesitter.start() end,
+    pattern = { 'rust' },
+    callback = function() vim.treesitter.start() end,
+})
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'python' },
+    callback = function() vim.treesitter.start() end,
 })
