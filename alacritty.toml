@@ -1,6 +1,7 @@
-[[keyboard.bindings]]
-action = "ToggleFullscreen"
-key = "F11"
+[keyboard]
+bindings = [
+    { action = "ToggleFullscreen", key = "F11" },
+]
 
 [bell]
 color = "#ffffff"
@@ -14,4 +15,26 @@ hide_when_typing = true
 [selection]
 save_to_clipboard = true
 
-[keyboard]
+[colors.primary]
+background = "#FFFFFF"
+foreground = "#5F6368"
+
+[colors.normal]
+black = "#202124"
+red = "#EA4335"
+green = "#34A853"
+yellow = "#FBBC04"
+blue = "#4285F4"
+magenta = "#A142F4"
+cyan = "#24C1E0"
+white = "#E8EAED"
+
+[colors.bright]
+black = "#5F6368"
+red = "#EA4335"
+green = "#34A853"
+yellow = "#FBBC05"
+blue = "#4285F4"
+magenta = "#A142F4"
+cyan = "#24C1E0"
+white = "#FFFFFF"
