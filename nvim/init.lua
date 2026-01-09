@@ -176,12 +176,11 @@ vim.lsp.config('rust-analyzer', {
 })
 vim.lsp.enable('rust-analyzer')
 
-vim.lsp.config('pyright', {
-    cmd = { 'pyright-langserver', '--stdio' },
-    filetypes = { 'python' },
-    single_file_support = true,
+vim.lsp.config('zls', {
+    cmd = { 'zls' },
+    filetypes = { 'zig' },
 })
-vim.lsp.enable('pyright')
+vim.lsp.enable('zls')
 
 require('nvim-treesitter').install({
     "c",
@@ -197,6 +196,10 @@ vim.api.nvim_create_autocmd('FileType', {
 })
 vim.api.nvim_create_autocmd('FileType', {
     pattern = { 'rust' },
+    callback = function() vim.treesitter.start() end,
+})
+vim.api.nvim_create_autocmd('FileType', {
+    pattern = { 'zig' },
     callback = function() vim.treesitter.start() end,
 })
 vim.api.nvim_create_autocmd('FileType', {
